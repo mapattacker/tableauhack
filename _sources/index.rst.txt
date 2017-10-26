@@ -17,6 +17,7 @@ This site gathers some of the default functions as well as hacks that can make y
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    
    organisation.rst
    visuals.rst
