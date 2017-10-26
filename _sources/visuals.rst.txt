@@ -14,3 +14,4 @@ but it is still possible. Read this link_ for more detals.
     :align: center
     :alt: alternate text
     :figclass: align-center
+    

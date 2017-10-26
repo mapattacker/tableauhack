@@ -128,7 +128,7 @@ single gap for both dimensions. Now it is perfect!
     :align: center
     :alt: alternate text
     :figclass: align-center
-    
+
     
 Parameter with (ALL) option
 **********************************

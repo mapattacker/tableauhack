@@ -72,8 +72,9 @@
     
       <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="organisation.html">Organisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visuals.html">Types of Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="labels.html">Labels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="field_calculations.html">Field Calculations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql.html">SQL</a></li>
@@ -121,9 +122,9 @@
 <div class="section" id="impala">
 <h2>Impala<a class="headerlink" href="#impala" title="Permalink to this headline">¶</a></h2>
 <p>Impala is a massively parallel processing SQL query engine for Hadoop.
-In short, it is very fast when running queries, with significant performances over Hive.</p>
+In short, it is very very fast when running queries, with significant performances even over Hive.</p>
 <p>However, connection to Tableau Desktop or Tableau Server might not be as straightforward, especially in Mac or Linux.</p>
-<p>For a start:</p>
+<p><strong>For a start:</strong></p>
 <blockquote>
 <div><ul class="simple">
 <li>Take a look at <a class="reference external" href="https://www.tableau.com/support/drivers">https://www.tableau.com/support/drivers</a></li>
@@ -185,14 +186,14 @@ Click on <code class="docutils literal"><span class="pre">Other</span> <span cla
 </ul>
 </div></blockquote>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:”/Volumes/Macintosh HD/usr/lib/“
-export ODBCINI=~/.odbc.ini
+ODBCINSTINI=~/.odbcinst.ini
 </pre></div>
 </div>
 <dl class="docutils">
-<dt>export</dt>
-<dd>ODBCINSTINI=~/.odbcinst.ini</dd>
+<dt>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</dt>
+<dd>export ODBCINI=~/.odbc.ini</dd>
 </dl>
-<p>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</p>
+<p>export</p>
 </div>
 <div class="section" id="linux-ubuntu">
 <h3>LINUX (UBUNTU)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">¶</a></h3>
@@ -200,24 +201,20 @@ export ODBCINI=~/.odbc.ini
 <div><ul class="simple">
 <li>Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., <code class="docutils literal"><span class="pre">libiodbc.so</span></code> to <code class="docutils literal"><span class="pre">libiodbc.so.2</span></code></li>
 <li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
-<li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables</li>
+<li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables below</li>
+<li>Use iodbctest <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
+<li>Enter some SQL commands to test</li>
 </ul>
 </div></blockquote>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
+<div class="code highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
 export ODBCINI=~/.odbc.ini
 </pre></div>
 </div>
 <dl class="docutils">
 <dt>export</dt>
-<dd>ODBCINSTINI=~/.odbcinst.ini</dd>
+<dd></dd>
 </dl>
 <p>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</p>
-<blockquote>
-<div><ul class="simple">
-<li>Use iodbctest <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
-<li>Enter some SQL commands to test</li>
-</ul>
-</div></blockquote>
 </div>
 <div class="section" id="tableau-desktop">
 <h3>Tableau Desktop<a class="headerlink" href="#tableau-desktop" title="Permalink to this headline">¶</a></h3>

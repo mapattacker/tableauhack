@@ -18,4 +18,3 @@ New shapes/symbols can be added to Tableau by creating a new folder or adding in
 ``Documents\My Tableau Repository\Shapes``.
 
 
-    

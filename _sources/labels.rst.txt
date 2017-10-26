@@ -12,4 +12,3 @@ You can only filter labels to show max/min values.
     :alt: alternate text
     :figclass: align-center
 
-

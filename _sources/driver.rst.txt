@@ -4,11 +4,11 @@ Drivers
 Impala
 ------
 Impala is a massively parallel processing SQL query engine for Hadoop. 
-In short, it is very fast when running queries, with significant performances over Hive.
+In short, it is very very fast when running queries, with significant performances even over Hive.
 
 However, connection to Tableau Desktop or Tableau Server might not be as straightforward, especially in Mac or Linux.
 
-For a start:
+**For a start:**
 
  * Take a look at https://www.tableau.com/support/drivers
  * Go to https://www.cloudera.com/documentation/other/connectors.html
@@ -72,8 +72,9 @@ MacOS
 .. code:: bash
 
   export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:”/Volumes/Macintosh HD/usr/lib/“
-  export ODBCINI=~/.odbc.ini export
   ODBCINSTINI=~/.odbcinst.ini export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
+  export ODBCINI=~/.odbc.ini export
+  
 
 
 LINUX (UBUNTU)
@@ -81,17 +82,16 @@ LINUX (UBUNTU)
 
  * Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., ``libiodbc.so`` to ``libiodbc.so.2``
  * Locate where iodbc driver manager libraries are located. Use ``sudo find / -name "*iodbc*`` to search
- * Go to ``nano ~/.bashrc`` and enter the following environmental variables
+ * Go to ``nano ~/.bashrc`` and enter the following environmental variables below
+ * Use iodbctest ``dsn=Tableau Impala Connection`` to test connection to Impala
+ * Enter some SQL commands to test
 
-.. code:: bash
+.. code::
 
   export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
   export ODBCINI=~/.odbc.ini export
-  ODBCINSTINI=~/.odbcinst.ini export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
+  .. ODBCINSTINI=~/.odbcinst.ini export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 
-
- * Use iodbctest ``dsn=Tableau Impala Connection`` to test connection to Impala
- * Enter some SQL commands to test
 
 Tableau Desktop
 ****************
