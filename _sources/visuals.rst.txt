@@ -9,7 +9,7 @@ but it is still possible. Read this link_ for more detals.
 
 .. _link: https://mapattack.wordpress.com/2017/03/19/adding-arrowheads-in-a-route/
 
-.. figure:: images/organisation1.png
+.. figure:: images/arrowhead.jpg
     :width: 450px
     :align: center
     :alt: alternate text
