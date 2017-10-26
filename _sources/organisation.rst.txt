@@ -9,7 +9,6 @@ Color coding worksheets makes it easier to differentiate which group them belong
 .. figure:: images/organisation1.png
     :width: 250px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -22,7 +21,6 @@ Unhide all of them with the same function.
 .. figure:: images/organisation2.png
     :width: 250px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
 
@@ -33,7 +31,6 @@ You will need to right-click that worksheet tab and unhide it for it to stay.
 .. figure:: images/organisation3.png
     :width: 250px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -43,7 +40,6 @@ You will need to right-click that worksheet tab and unhide it for it to stay.
 .. figure:: images/organisation4.png
     :width: 400px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -57,7 +53,6 @@ We can search for specific fields using the search box.
 .. figure:: images/organisation5.png
     :width: 400px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
