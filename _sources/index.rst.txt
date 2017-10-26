@@ -9,12 +9,19 @@ Tableau Hacks to Make You a Pro!
 Tableau is those type of software that is easy to start with, but get increasingly complex the deeper you dived into it.
 This site gathers some of the default functions and hacks that can make your life easier.
 
+.. figure:: images/label1.png
+    :width: 350px
+    :align: center
+    :alt: alternate text
+    :figclass: align-center
+
 .. toctree::
    :maxdepth: 2
    
    organisation.rst
    visuals.rst
    axis.rst
+   labels.rst
    filters.rst
    field_calculations.rst
    sql.rst
