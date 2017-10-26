@@ -3,11 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Tableau Hacks to Make You a Pro!
+Tableau Hacks
 ========================================
 
 Tableau is those type of software that is easy to start with, but get increasingly complex the deeper you dive into it.
-This site gathers some of the default functions as well as hacks that can make your life easier.
+This site gathers some of the default functions as well as hacks that can make your life easier, 
+or even a Tableau Pro!
 
 .. figure:: images/tableaulogo.jpg
     :width: 150px
