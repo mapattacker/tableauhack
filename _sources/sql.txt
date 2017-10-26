@@ -1,0 +1,61 @@
+SQL
+===
+
+For production development, it is preferred to do most of the ETL and especially aggregation in the database
+so that data being fed to Tableau is much smaller.
+
+This is a key performance requirement since the database engine is usually more powerful.
+
+Datetime Slicing
+*****************
+
+.. code:: sql
+
+  -- Show Only Time at Axis
+  -- Set date as constant so that Tableau can group by time only
+  SELECT to_char(DATE_TIME, '1900-01-01 HH24:MI')::timestamp
+  FROM table_nm
+
+  -- Time Slice
+  -- change 900 to appropriate seconds, e.g., 15 mins == 15 * 60 = 900
+  -- convert timestamp to epoch, divide by interval desired in minutes then round to get the desired interval
+  SELECT to_timestamp(floor((extract('epoch' from starttime) / 900 )) * 900) 
+  FROM tablename
+
+
+Restrict Datetime Range
+**********************************
+
+.. code:: sql
+
+  --Filter Date Range
+  WHERE trunc(DATE_TIME) BETWEEN :strt_1_tme and :end_1_tme;
+
+  --Filter Time Range
+  WHERE (to_char(DATE_TIME,'hh24:mi') between :stme1 and :etme1))
+
+  --Filter Fixed Time Range
+  where transactiontimestamp between now()::timestamp - interval '24 hour' 
+        and now()::timestamp
+
+  --Filter Latest Data by DateTime
+  where transactiontimestamp = (select max(transactiontimestamp) from joins limit 1)
+
+
+Parameter with ALL option
+**********************************
+
+.. code:: sql
+
+  --Filter Date Range
+  WHERE trunc(DATE_TIME) BETWEEN :strt_1_tme and :end_1_tme;
+
+  --Filter Time Range
+  WHERE (to_char(DATE_TIME,'hh24:mi') between :stme1 and :etme1))
+
+  --Filter Fixed Time Range
+  where transactiontimestamp between now()::timestamp - interval '24 hour' 
+        and now()::timestamp
+
+  --Filter Latest Data by DateTime
+  where transactiontimestamp = (select max(transactiontimestamp) from joins limit 1)

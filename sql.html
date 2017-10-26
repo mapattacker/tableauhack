@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>SQL &#8212; Tableau 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dashboard Layout" href="layout.html" />
+    <link rel="prev" title="Field Calculations" href="field_calculations.html" />
+  
+   
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="layout.html" title="Dashboard Layout"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="field_calculations.html" title="Field Calculations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">Tableau</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="organisation.html">Organisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visuals.html">Types of Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field_calculations.html">Field Calculations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SQL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#datetime-slicing">Datetime Slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restrict-datetime-range">Restrict Datetime Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gap-fill">Gap Fill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-with-all-option">Parameter with (ALL) option</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layout.html">Dashboard Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>SQL</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="sql">
+<h1>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>
+<p>For production development, it is preferred to do most of the ETL and especially aggregation in the database
+so that data being fed to Tableau is much smaller.</p>
+<p>This is a key performance requirement since the database engine is usually more powerful.</p>
+<div class="section" id="datetime-slicing">
+<h2>Datetime Slicing<a class="headerlink" href="#datetime-slicing" title="Permalink to this headline">¶</a></h2>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-- Show Only Time at Axis</span>
+<span class="c1">#-- Set date as constant so that Tableau can group by time only</span>
+<span class="n">SELECT</span> <span class="n">to_char</span><span class="p">(</span><span class="n">DATE_TIME</span><span class="p">,</span> <span class="s1">&#39;1900-01-01 HH24:MI&#39;</span><span class="p">)::</span><span class="n">timestamp</span>
+<span class="n">FROM</span> <span class="n">table_nm</span>
+
+
+<span class="c1">#-- Time Slice</span>
+<span class="c1">#-- change 900 to appropriate seconds, e.g., 15 mins == 15 * 60 = 900</span>
+<span class="c1">#-- convert timestamp to epoch, divide by interval desired in minutes then round to get the desired interval</span>
+<span class="n">SELECT</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="n">floor</span><span class="p">((</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;epoch&#39;</span> <span class="kn">from</span> <span class="nn">starttime</span><span class="p">)</span> <span class="o">/</span> <span class="mi">900</span> <span class="p">))</span> <span class="o">*</span> <span class="mi">900</span><span class="p">)</span>
+<span class="n">FROM</span> <span class="n">tablename</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restrict-datetime-range">
+<h2>Restrict Datetime Range<a class="headerlink" href="#restrict-datetime-range" title="Permalink to this headline">¶</a></h2>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="c1">#--Filter Date Range</span>
+<span class="n">WHERE</span> <span class="n">trunc</span><span class="p">(</span><span class="n">DATE_TIME</span><span class="p">)</span> <span class="n">BETWEEN</span> <span class="p">:</span><span class="n">strt_1_tme</span> <span class="ow">and</span> <span class="p">:</span><span class="n">end_1_tme</span><span class="p">;</span>
+
+
+<span class="c1">#--Filter Time Range</span>
+<span class="n">WHERE</span> <span class="p">(</span><span class="n">to_char</span><span class="p">(</span><span class="n">DATE_TIME</span><span class="p">,</span><span class="s1">&#39;hh24:mi&#39;</span><span class="p">)</span> <span class="n">between</span> <span class="p">:</span><span class="n">stme1</span> <span class="ow">and</span> <span class="p">:</span><span class="n">etme1</span><span class="p">))</span>
+
+
+<span class="c1">#--Filter Fixed Time Range</span>
+<span class="n">where</span> <span class="n">transactiontimestamp</span> <span class="n">between</span> <span class="n">now</span><span class="p">()::</span><span class="n">timestamp</span> <span class="o">-</span> <span class="n">interval</span> <span class="s1">&#39;24 hour&#39;</span>
+      <span class="ow">and</span> <span class="n">now</span><span class="p">()::</span><span class="n">timestamp</span>
+
+
+<span class="c1">#--Filter Latest Data by DateTime</span>
+<span class="n">where</span> <span class="n">transactiontimestamp</span> <span class="o">=</span> <span class="p">(</span><span class="n">select</span> <span class="nb">max</span><span class="p">(</span><span class="n">transactiontimestamp</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">joins</span> <span class="n">limit</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gap-fill">
+<h2>Gap Fill<a class="headerlink" href="#gap-fill" title="Permalink to this headline">¶</a></h2>
+<p>Gap Filling is very important to fulfil the aesthetics of a visualisation.
+Lets say a barchart is supposed to have <em>1 dimension</em> with 10 attributes to show.
+But the dataset only contain 5 at this time. The barchart will only show 5 bars.</p>
+<p>This is bad for aesthetics as the bar width will resize whenever a new row show a new attribute of that dimension.</p>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="_images/gapfill1.PNG"><img alt="alternate text" src="_images/gapfill1.PNG" style="width: 450px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Other attributes will not show as none of the rows have those data</span></p>
+</div>
+<p>To prevent that, we can have a union in sql to add all possible attributes in.</p>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">dimension</span> <span class="kn">from</span> <span class="nn">table1</span>
+<span class="n">union</span>
+<span class="n">select</span> <span class="n">null</span> <span class="k">as</span> <span class="n">col1</span><span class="p">,</span>
+        <span class="n">null</span> <span class="k">as</span> <span class="n">col2</span><span class="p">,</span>
+        <span class="n">dimension</span>
+<span class="kn">from</span> <span class="nn">mapping_table</span>
+</pre></div>
+</div>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="_images/gapfill2.PNG"><img alt="alternate text" src="_images/gapfill2.PNG" style="width: 450px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Other attributes will show now.</span></p>
+</div>
+<p>Another time of gap fill occurs when we have a visualisation with <em>more than 1 dimension</em>.
+The previous code will not do as it will produce this. A example is a heatmap shown below.</p>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="_images/gapfill3.PNG"><img alt="alternate text" src="_images/gapfill3.PNG" style="width: 450px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">All the nulls will be filled only for 1 of the dimension.</span></p>
+</div>
+<p>A <em>cross-join</em> for the new table for union in SQL is necessary for this case to fill every
+single gap for both dimensions. Now it is perfect!</p>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="c1">#--generate_series() is exclusive for postgresql</span>
+
+<span class="n">select</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">dimension1</span><span class="p">,</span> <span class="n">date_dimension2</span> <span class="kn">from</span> <span class="nn">table1</span>
+<span class="n">where</span> <span class="n">date_dimension2</span> <span class="n">between</span> <span class="s1">&#39;2007-02-01&#39;</span><span class="p">::</span><span class="n">timestamp</span> <span class="ow">and</span> <span class="s1">&#39;2008-04-01&#39;</span><span class="p">::</span><span class="n">timestamp</span>
+
+<span class="n">union</span>
+
+<span class="n">select</span> <span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">dimension1</span><span class="p">,</span> <span class="n">date_dimension2</span> <span class="kn">from</span>
+
+<span class="c1">#--table1 for cross join</span>
+<span class="p">(</span><span class="n">select</span> <span class="n">null</span> <span class="k">as</span> <span class="n">col1</span><span class="p">,</span>
+        <span class="n">null</span> <span class="k">as</span> <span class="n">col2</span><span class="p">,</span>
+        <span class="n">dimension</span>
+<span class="kn">from</span> <span class="nn">mapping_table</span><span class="p">)</span> <span class="n">a</span>
+
+<span class="n">cross</span> <span class="n">join</span>
+
+<span class="c1">#--table2 for cross join</span>
+<span class="p">(</span><span class="n">select</span> <span class="n">date_trunc</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="n">dd</span><span class="p">)::</span><span class="n">date</span> <span class="k">as</span> <span class="n">date_dimension2</span>
+ <span class="kn">from</span> <span class="nn">generate_series</span>
+        <span class="p">(</span><span class="s1">&#39;2007-02-01&#39;</span><span class="p">::</span><span class="n">timestamp</span><span class="p">,</span>
+         <span class="s1">&#39;2008-04-01&#39;</span><span class="p">::</span><span class="n">timestamp</span><span class="p">,</span>
+         <span class="s1">&#39;1 day&#39;</span><span class="p">::</span><span class="n">interval</span><span class="p">)</span> <span class="n">dd</span><span class="p">)</span> <span class="n">b</span>
+</pre></div>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/gapfill4.PNG"><img alt="alternate text" src="_images/gapfill4.PNG" style="width: 450px; height: 100px;" /></a>
+</div>
+</div>
+<div class="section" id="parameter-with-all-option">
+<h2>Parameter with (ALL) option<a class="headerlink" href="#parameter-with-all-option" title="Permalink to this headline">¶</a></h2>
+<p>One of the disadvantages of Parameters to Quick Filters among other things is that it lacks a select ALL option.
+However, we can manually code for this in SQL.</p>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-- with (All) option</span>
+
+      <span class="c1">#--either define a table with possible and (All) attributes, and define in WHERE clause</span>
+<span class="k">with</span> <span class="n">filter_week</span> <span class="n">AS</span> <span class="p">(</span><span class="n">select</span> <span class="s1">&#39;Weekend&#39;</span> <span class="n">AS</span> <span class="n">weektype</span><span class="p">,</span> <span class="s1">&#39;Weekend&#39;</span> <span class="n">AS</span> <span class="n">param</span>
+                        <span class="n">UNION</span> <span class="n">select</span> <span class="s1">&#39;Weekday&#39;</span> <span class="n">AS</span> <span class="n">weektype</span><span class="p">,</span> <span class="s1">&#39;Weekday&#39;</span> <span class="n">AS</span> <span class="n">param</span>
+                        <span class="n">UNION</span> <span class="n">select</span> <span class="s1">&#39;Weekday&#39;</span> <span class="n">AS</span> <span class="n">weektype</span><span class="p">,</span> <span class="s1">&#39;(All)&#39;</span> <span class="n">AS</span> <span class="n">param</span>
+                        <span class="n">UNION</span> <span class="n">select</span> <span class="s1">&#39;Weekend&#39;</span> <span class="n">AS</span> <span class="n">weektype</span><span class="p">,</span> <span class="s1">&#39;(All)&#39;</span> <span class="n">AS</span> <span class="n">param</span><span class="p">)</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">DBO</span><span class="o">.</span><span class="n">table_nm</span> <span class="n">a</span>
+<span class="n">WHERE</span> <span class="n">WEEKTYPE</span> <span class="n">IN</span> <span class="p">(</span><span class="n">SELECT</span> <span class="n">weektype</span> <span class="n">FROM</span> <span class="n">filter_week</span> <span class="n">WHERE</span> <span class="n">param</span><span class="o">=</span><span class="p">:</span><span class="n">week</span><span class="p">);</span>
+
+
+      <span class="c1">#--or just entirely in the WHERE clause as below</span>
+<span class="n">WHERE</span> <span class="p">(((</span><span class="n">time_belt</span><span class="o">=</span><span class="s1">&#39;Morning&#39;</span> <span class="n">OR</span> <span class="n">time_belt</span><span class="o">=</span><span class="s1">&#39;Day&#39;</span> <span class="n">OR</span> <span class="n">time_belt</span><span class="o">=</span> <span class="s1">&#39;Evening&#39;</span><span class="p">)</span> <span class="n">AND</span> <span class="p">:</span><span class="n">timebelt</span><span class="o">=</span><span class="s1">&#39;(All)&#39;</span><span class="p">)</span> <span class="n">OR</span> <span class="p">(</span><span class="n">time_belt</span><span class="o">=</span><span class="p">:</span><span class="n">timebelt</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="field_calculations.html" title="previous chapter (use the left arrow)">Field Calculations</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="layout.html" title="next chapter (use the right arrow)">Dashboard Layout</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="layout.html" title="Dashboard Layout"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="field_calculations.html" title="Field Calculations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Jake. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

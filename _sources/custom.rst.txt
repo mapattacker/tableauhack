@@ -1,0 +1,21 @@
+Custom Stuff
+============
+
+Color Palettes
+---------------
+New color palettes can be added at the ``\Documents\My Tableau Repository\Preferences.tps`` file.
+You can add new palettes manually by editing the file, or replace it with another tps that someone build.
+Note to change the name back to ``Preferences.tps``.
+
+An excellent list of palettes is from the famous Color Brewer. 
+Someone has created it for Tableau, which can be downloaded here_.
+
+.. _here: https://community.tableau.com/thread/117530
+
+Shapes
+-------
+New shapes/symbols can be added to Tableau by creating a new folder or adding into existing folders within
+``Documents\My Tableau Repository\Shapes``.
+
+
+    

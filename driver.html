@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Drivers &#8212; Tableau 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Custom Stuff" href="custom.html" />
+  
+   
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="custom.html" title="Custom Stuff"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">Tableau</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="organisation.html">Organisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visuals.html">Types of Visuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field_calculations.html">Field Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sql.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layout.html">Dashboard Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#impala">Impala</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>Drivers</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="drivers">
+<h1>Drivers<a class="headerlink" href="#drivers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="impala">
+<h2>Impala<a class="headerlink" href="#impala" title="Permalink to this headline">¶</a></h2>
+<p>Impala is a massively parallel processing SQL query engine for Hadoop.
+In short, it is very fast when running queries, with significant performances over Hive.</p>
+<p>However, connection to Tableau Desktop or Tableau Server might not be as straightforward, especially in Mac or Linux.</p>
+<p>For a start:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Take a look at <a class="reference external" href="https://www.tableau.com/support/drivers">https://www.tableau.com/support/drivers</a></li>
+<li>Go to <a class="reference external" href="https://www.cloudera.com/documentation/other/connectors.html">https://www.cloudera.com/documentation/other/connectors.html</a></li>
+<li>Select OS &amp; driver connection type &amp; version</li>
+<li>Driver will be downloaded</li>
+<li>Also download documentation at same page or use the link below</li>
+<li><a class="reference external" href="http://www.cloudera.com/documentation/other/connectors/impala-odbc/latest/Cloudera-ODBC-Driver-for-Impala-Install-Guide.pdf">http://www.cloudera.com/documentation/other/connectors/impala-odbc/latest/Cloudera-ODBC-Driver-for-Impala-Install-Guide.pdf</a></li>
+<li>Follow the documentation for driver setup, main thing is to configure the DSN (Data Source Name)</li>
+</ul>
+</div></blockquote>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>First, go to Windows ODBC manager. Go to Windows &gt; Search &gt; 64-bit ODBC Manager.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/impala1.PNG"><img alt="alternate text" src="_images/impala1.PNG" style="width: 450px; height: 100px;" /></a>
+</div>
+<p>Go to Impala IDE, HUE and check the database name to connect.</p>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="_images/impala2.PNG"><img alt="alternate text" src="_images/impala2.PNG" style="width: 450px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">HUE IDE</span></p>
+</div>
+<p>Note that Tableau&#8217;s Cloudera Hadoop ODBC driver does not work, god knows why.
+Click on <code class="docutils literal"><span class="pre">Other</span> <span class="pre">Databases</span> <span class="pre">(ODBC)</span></code> and enter the details for DSN name, Server IP, &amp; Port (51052)</p>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="_images/impala3.PNG"><img alt="alternate text" src="_images/impala3.PNG" style="width: 450px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Add the host, port &amp; database</span></p>
+</div>
+</div>
+<div class="section" id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">/opt/cloudera/impalaodbc/Setup</span></code></li>
+<li>copy odbc.ini &amp; odbcinst.ini to user directory</li>
+<li><code class="docutils literal"><span class="pre">cp</span> <span class="pre">odbc.ini</span> <span class="pre">~</span></code></li>
+<li><code class="docutils literal"><span class="pre">cp</span> <span class="pre">odbcinst.ini</span> <span class="pre">~</span></code></li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">open</span> <span class="pre">odbc.ini</span></code></dt>
+<dd><ul class="first last">
+<li>Change data source name (DNS) to your liking</li>
+<li>add HOST=[your_ip]</li>
+<li>add PORT=[21050]</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>change both files to hidden</dt>
+<dd><ul class="first last">
+<li><code class="docutils literal"><span class="pre">mv</span> <span class="pre">odbc.ini</span> <span class="pre">.odbd.ini</span></code></li>
+<li><code class="docutils literal"><span class="pre">mv</span> <span class="pre">odbcinst.ini</span> <span class="pre">.odbcinst.ini</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
+<li>Then add the following environment variables to the bash profile <code class="docutils literal"><span class="pre">nano</span> <span class="pre">.bash_profile</span></code></li>
+</ul>
+</div></blockquote>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:”/Volumes/Macintosh HD/usr/lib/“
+export ODBCINI=~/.odbc.ini
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>export</dt>
+<dd>ODBCINSTINI=~/.odbcinst.ini</dd>
+</dl>
+<p>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</p>
+</div>
+<div class="section" id="linux-ubuntu">
+<h3>LINUX (UBUNTU)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., <code class="docutils literal"><span class="pre">libiodbc.so</span></code> to <code class="docutils literal"><span class="pre">libiodbc.so.2</span></code></li>
+<li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
+<li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables</li>
+</ul>
+</div></blockquote>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
+export ODBCINI=~/.odbc.ini
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>export</dt>
+<dd>ODBCINSTINI=~/.odbcinst.ini</dd>
+</dl>
+<p>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use iodbctest <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
+<li>Enter some SQL commands to test</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tableau-desktop">
+<h3>Tableau Desktop<a class="headerlink" href="#tableau-desktop" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>In Tableau Desktop, go to Other Databases (ODBC)</li>
+<li>At DSN &gt; select the DSN name you created</li>
+<li>Click Connect</li>
+<li>Enter Server, Port (21050) &amp; database (default)</li>
+<li>Click Sign In</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="custom.html" title="previous chapter (use the left arrow)">Custom Stuff</a>
+      </div>
+    
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="custom.html" title="Custom Stuff"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Jake. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

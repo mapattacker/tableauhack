@@ -1,0 +1,12 @@
+Axis
+====
+
+Multiple Measures
+------------------
+
+
+Time Series (w/o) Date
+-----------------------
+In SQL or Field Calculation, set a datetime field to time with date as a constant.
+
+Add field to visual row/column. Change format to just ``hh:nn`` or ``h:nn AMPM`` to prevent the date constant from showing.

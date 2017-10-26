@@ -1,0 +1,64 @@
+Organisation
+=============
+
+
+Color tabs
+-----------
+Color coding worksheets makes it easier to differentiate which group them belong to.
+
+.. figure:: images/organisation1.png
+    :width: 250px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+    
+    
+Hide tabs in dashboard
+-----------------------
+If you have too many worksheets, you can hide them by right clicking a dashboard and hide all associated worksheets.
+Unhide all of them with the same function.
+
+.. figure:: images/organisation2.png
+    :width: 250px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+
+To show each of them individually to worksheet view, there are two options.
+Note that they will be hidden when you go to another tab. 
+You will need to right-click that worksheet tab and unhide it for it to stay.
+
+.. figure:: images/organisation3.png
+    :width: 250px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+    
+    Method 1
+  
+  
+.. figure:: images/organisation4.png
+    :width: 400px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+    
+    Method 2
+
+Organise Datafields
+--------------------
+For proper organisation, it is better to create folders and drop datafields into folder categories.
+We can search for specific fields using the search box.
+
+.. figure:: images/organisation5.png
+    :width: 400px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+    
+    Organise into folders

@@ -1,0 +1,16 @@
+Labels
+=======
+
+Label Mark
+-----------
+The specific labels can be formatted using the labels card under marks.
+You can only filter labels to show max/min values.
+
+.. figure:: images/label1.png
+    :width: 450px
+    :align: center
+    :height: 100px
+    :alt: alternate text
+    :figclass: align-center
+
+

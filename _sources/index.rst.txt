@@ -1,0 +1,22 @@
+.. Tableau documentation master file, created by
+   sphinx-quickstart on Tue Oct 24 23:30:19 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Tableau Hacks to Make You a Pro!
+========================================
+
+.. toctree::
+   :maxdepth: 2
+   
+   organisation.rst
+   visuals.rst
+   axis.rst
+   filters.rst
+   field_calculations.rst
+   sql.rst
+   layout.rst
+   custom.rst
+   driver.rst
+
+
