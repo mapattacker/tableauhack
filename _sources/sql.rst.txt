@@ -53,7 +53,7 @@ But the dataset only contain 5 at this time. The barchart will only show 5 bars.
 
 This is bad for aesthetics as the bar width will resize whenever a new row show a new attribute of that dimension.
 
-.. figure:: images/gapfill1.PNG
+.. figure:: images/gapfill1.png
     :width: 450px
     :align: center
     :alt: alternate text
@@ -73,7 +73,7 @@ To prevent that, we can have a union in sql to add all possible attributes in.
   from mapping_table
 
 
-.. figure:: images/gapfill2.PNG
+.. figure:: images/gapfill2.png
     :width: 450px
     :align: center
     :alt: alternate text
