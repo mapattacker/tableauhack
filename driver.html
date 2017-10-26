@@ -71,7 +71,7 @@
     
     
       <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="organisation.html">Organisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="organisation.html">Organise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="labels.html">Labels</a></li>
@@ -186,14 +186,13 @@ Click on <code class="docutils literal"><span class="pre">Other</span> <span cla
 </ul>
 </div></blockquote>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:”/Volumes/Macintosh HD/usr/lib/“
-ODBCINSTINI=~/.odbcinst.ini
+export ODBCINI=~/.odbc.ini
+
+export ODBCINSTINI=~/.odbcinst.ini
+
+export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</dt>
-<dd>export ODBCINI=~/.odbc.ini</dd>
-</dl>
-<p>export</p>
 </div>
 <div class="section" id="linux-ubuntu">
 <h3>LINUX (UBUNTU)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">¶</a></h3>
@@ -208,13 +207,12 @@ ODBCINSTINI=~/.odbcinst.ini
 </div></blockquote>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
 export ODBCINI=~/.odbc.ini
+
+export ODBCINSTINI=~/.odbcinst.ini
+
+export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>export</dt>
-<dd></dd>
-</dl>
-<p>export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini</p>
 </div>
 <div class="section" id="tableau-desktop">
 <h3>Tableau Desktop<a class="headerlink" href="#tableau-desktop" title="Permalink to this headline">¶</a></h3>

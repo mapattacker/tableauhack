@@ -72,9 +72,9 @@ MacOS
 .. code:: bash
 
   export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:”/Volumes/Macintosh HD/usr/lib/“
-  ODBCINSTINI=~/.odbcinst.ini export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
-  export ODBCINI=~/.odbc.ini export
-  
+  export ODBCINI=~/.odbc.ini 
+  export ODBCINSTINI=~/.odbcinst.ini 
+  export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 
 
 LINUX (UBUNTU)
@@ -86,11 +86,14 @@ LINUX (UBUNTU)
  * Use iodbctest ``dsn=Tableau Impala Connection`` to test connection to Impala
  * Enter some SQL commands to test
 
+
 .. code::
 
   export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
-  export ODBCINI=~/.odbc.ini export
-  .. ODBCINSTINI=~/.odbcinst.ini export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
+  export ODBCINI=~/.odbc.ini 
+  export ODBCINSTINI=~/.odbcinst.ini 
+  export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
+
 
 
 Tableau Desktop
