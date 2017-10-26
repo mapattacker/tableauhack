@@ -56,7 +56,6 @@ This is bad for aesthetics as the bar width will resize whenever a new row show 
 .. figure:: images/gapfill1.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -77,7 +76,6 @@ To prevent that, we can have a union in sql to add all possible attributes in.
 .. figure:: images/gapfill2.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -90,7 +88,6 @@ The previous code will not do as it will produce this. A example is a heatmap sh
 .. figure:: images/gapfill3.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -129,7 +126,6 @@ single gap for both dimensions. Now it is perfect!
 .. figure:: images/gapfill4.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     

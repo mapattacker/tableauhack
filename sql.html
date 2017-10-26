@@ -171,7 +171,7 @@ Lets say a barchart is supposed to have <em>1 dimension</em> with 10 attributes 
 But the dataset only contain 5 at this time. The barchart will only show 5 bars.</p>
 <p>This is bad for aesthetics as the bar width will resize whenever a new row show a new attribute of that dimension.</p>
 <div class="align-center figure" id="id1">
-<a class="reference internal image-reference" href="_images/gapfill1.PNG"><img alt="alternate text" src="_images/gapfill1.PNG" style="width: 450px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/gapfill1.PNG"><img alt="alternate text" src="_images/gapfill1.PNG" style="width: 450px;" /></a>
 <p class="caption"><span class="caption-text">Other attributes will not show as none of the rows have those data</span></p>
 </div>
 <p>To prevent that, we can have a union in sql to add all possible attributes in.</p>
@@ -184,13 +184,13 @@ But the dataset only contain 5 at this time. The barchart will only show 5 bars.
 </pre></div>
 </div>
 <div class="align-center figure" id="id2">
-<a class="reference internal image-reference" href="_images/gapfill2.PNG"><img alt="alternate text" src="_images/gapfill2.PNG" style="width: 450px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/gapfill2.PNG"><img alt="alternate text" src="_images/gapfill2.PNG" style="width: 450px;" /></a>
 <p class="caption"><span class="caption-text">Other attributes will show now.</span></p>
 </div>
 <p>Another time of gap fill occurs when we have a visualisation with <em>more than 1 dimension</em>.
 The previous code will not do as it will produce this. A example is a heatmap shown below.</p>
 <div class="align-center figure" id="id3">
-<a class="reference internal image-reference" href="_images/gapfill3.PNG"><img alt="alternate text" src="_images/gapfill3.PNG" style="width: 450px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/gapfill3.PNG"><img alt="alternate text" src="_images/gapfill3.PNG" style="width: 450px;" /></a>
 <p class="caption"><span class="caption-text">All the nulls will be filled only for 1 of the dimension.</span></p>
 </div>
 <p>A <em>cross-join</em> for the new table for union in SQL is necessary for this case to fill every
@@ -221,7 +221,7 @@ single gap for both dimensions. Now it is perfect!</p>
 </pre></div>
 </div>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="_images/gapfill4.PNG"><img alt="alternate text" src="_images/gapfill4.PNG" style="width: 450px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/gapfill4.PNG"><img alt="alternate text" src="_images/gapfill4.PNG" style="width: 450px;" /></a>
 </div>
 </div>
 <div class="section" id="parameter-with-all-option">

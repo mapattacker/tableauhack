@@ -26,7 +26,6 @@ First, go to Windows ODBC manager. Go to Windows > Search > 64-bit ODBC Manager.
 .. figure:: images/impala1.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -35,7 +34,6 @@ Go to Impala IDE, HUE and check the database name to connect.
 .. figure:: images/impala2.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
@@ -48,7 +46,6 @@ Click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server I
 .. figure:: images/impala3.PNG
     :width: 450px
     :align: center
-    :height: 100px
     :alt: alternate text
     :figclass: align-center
     
