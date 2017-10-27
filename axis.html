@@ -80,6 +80,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Axis</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#multiple-measures">Multiple Measures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#time-series-w-o-date">Time Series (w/o) Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#time-bins">Time Bins</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="labels.html">Labels</a></li>
@@ -129,8 +130,39 @@
 </div>
 <div class="section" id="time-series-w-o-date">
 <h2>Time Series (w/o) Date<a class="headerlink" href="#time-series-w-o-date" title="Permalink to this headline">¶</a></h2>
-<p>In SQL or Field Calculation, set a datetime field to time with date as a constant.</p>
+<p>Tableau does not have a data type for time only; independent of date.
+Hence, the only way to go about it is to set the date to a constant.</p>
+<p>In Tableau, you can set the field calculation like this.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>  <span class="c1">#-- Set date as constant so that Tableau can group by time only</span>
+<span class="n">DATEADD</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="n">DATETRUNC</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,[</span><span class="n">Date</span> <span class="n">Time</span><span class="p">]),</span> <span class="p">[</span><span class="n">Date</span> <span class="n">Time</span><span class="p">]),</span> <span class="c1">#1900-01-01#)</span>
+</pre></div>
+</div>
+<p>In SQL, you can do the same using this:</p>
+<div class="code sql highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-- Show Only Time at Axis</span>
+<span class="c1">#-- Set date as constant so that Tableau can group by time only</span>
+<span class="n">SELECT</span> <span class="n">to_char</span><span class="p">(</span><span class="n">DATE_TIME</span><span class="p">,</span> <span class="s1">&#39;1900-01-01 HH24:MI&#39;</span><span class="p">)::</span><span class="n">timestamp</span>
+<span class="n">FROM</span> <span class="n">table_nm</span>
+</pre></div>
+</div>
 <p>Add field to visual row/column. Change format to just <code class="docutils literal"><span class="pre">hh:nn</span></code> or <code class="docutils literal"><span class="pre">h:nn</span> <span class="pre">AMPM</span></code> to prevent the date constant from showing.</p>
+</div>
+<div class="section" id="time-bins">
+<h2>Time Bins<a class="headerlink" href="#time-bins" title="Permalink to this headline">¶</a></h2>
+<p>This specific example, adds on the previous example to have an adjustable parameter for time binning.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1">#--adjustable time bin aggregation</span>
+
+  <span class="c1">#--(1) Set date as constant so that Tableau can group by time only</span>
+<span class="n">DATEADD</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="n">DATETRUNC</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,[</span><span class="n">Date</span> <span class="n">Time</span><span class="p">]),</span> <span class="p">[</span><span class="n">Date</span> <span class="n">Time</span><span class="p">]),</span> <span class="c1">#1900-01-01#)</span>
+
+  <span class="c1">#--(2) field calculation (Time Bins)</span>
+<span class="n">DATEADD</span><span class="p">(</span><span class="s1">&#39;minute&#39;</span><span class="p">,</span>
+      <span class="n">INT</span><span class="p">(</span><span class="n">DATEDIFF</span><span class="p">(</span><span class="s1">&#39;minute&#39;</span><span class="p">,</span> <span class="n">DATETRUNC</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">YF</span> <span class="p">:</span> <span class="n">Time</span><span class="p">]),</span> <span class="p">[</span><span class="n">YF</span> <span class="p">:</span> <span class="n">Time</span><span class="p">])</span> <span class="o">/</span> <span class="p">[</span><span class="n">Minute</span> <span class="n">Bin</span> <span class="n">Size</span><span class="p">]</span>
+          <span class="p">)</span> <span class="o">*</span> <span class="p">[</span><span class="n">Minute</span> <span class="n">Bin</span> <span class="n">Size</span><span class="p">],</span>
+<span class="n">DATETRUNC</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">YF</span> <span class="p">:</span> <span class="n">Time</span><span class="p">]))</span>
+
+  <span class="c1">#--(3) set an integer parameter with range for changing bin size</span>
+</pre></div>
+</div>
 </div>
 </div>
 

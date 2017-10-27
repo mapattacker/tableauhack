@@ -163,7 +163,7 @@ Click on <code class="docutils literal"><span class="pre">Other</span> <span cla
 <li><code class="docutils literal"><span class="pre">cp</span> <span class="pre">odbc.ini</span> <span class="pre">~</span></code></li>
 <li><code class="docutils literal"><span class="pre">cp</span> <span class="pre">odbcinst.ini</span> <span class="pre">~</span></code></li>
 <li><dl class="first docutils">
-<dt><code class="docutils literal"><span class="pre">open</span> <span class="pre">odbc.ini</span></code></dt>
+<dt><code class="docutils literal"><span class="pre">nano</span> <span class="pre">odbc.ini</span></code></dt>
 <dd><ul class="first last">
 <li>Change data source name (DNS) to your liking</li>
 <li>add HOST=[your_ip]</li>
@@ -201,7 +201,7 @@ export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 <li>Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., <code class="docutils literal"><span class="pre">libiodbc.so</span></code> to <code class="docutils literal"><span class="pre">libiodbc.so.2</span></code></li>
 <li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
 <li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables below</li>
-<li>Use iodbctest <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
+<li>Use <code class="docutils literal"><span class="pre">iodbctest</span></code> &gt; <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
 <li>Enter some SQL commands to test</li>
 </ul>
 </div></blockquote>

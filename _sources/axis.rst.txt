@@ -7,7 +7,44 @@ Multiple Measures
 
 Time Series (w/o) Date
 -----------------------
-In SQL or Field Calculation, set a datetime field to time with date as a constant.
+Tableau does not have a data type for time only; independent of date. 
+Hence, the only way to go about it is to set the date to a constant.
+
+In Tableau, you can set the field calculation like this. 
+
+.. code:: 
+  
+    #-- Set date as constant so that Tableau can group by time only
+  DATEADD('second', DATEDIFF('second', DATETRUNC('day',[Date Time]), [Date Time]), #1900-01-01#)
+
+In SQL, you can do the same using this:
+
+.. code:: sql
+
+  #-- Show Only Time at Axis
+  #-- Set date as constant so that Tableau can group by time only
+  SELECT to_char(DATE_TIME, '1900-01-01 HH24:MI')::timestamp
+  FROM table_nm
 
 Add field to visual row/column. Change format to just ``hh:nn`` or ``h:nn AMPM`` to prevent the date constant from showing.
 
+
+Time Bins
+---------
+
+This specific example, adds on the previous example to have an adjustable parameter for time binning.
+
+.. code:: 
+  
+  #--adjustable time bin aggregation
+  
+    #--(1) Set date as constant so that Tableau can group by time only
+  DATEADD('second', DATEDIFF('second', DATETRUNC('day',[Date Time]), [Date Time]), #1900-01-01#)
+  
+    #--(2) field calculation (Time Bins)
+  DATEADD('minute', 
+  	INT(DATEDIFF('minute', DATETRUNC('day', [YF : Time]), [YF : Time]) / [Minute Bin Size] 
+       	    ) * [Minute Bin Size], 
+  DATETRUNC('day', [YF : Time]))
+  
+    #--(3) set an integer parameter with range for changing bin size

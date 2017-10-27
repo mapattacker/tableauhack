@@ -59,7 +59,7 @@ MacOS
  * copy odbc.ini & odbcinst.ini to user directory
  * ``cp odbc.ini ~``
  * ``cp odbcinst.ini ~``
- * ``open odbc.ini``
+ * ``nano odbc.ini``
     * Change data source name (DNS) to your liking
     * add HOST=[your_ip]
     * add PORT=[21050]
@@ -83,7 +83,7 @@ LINUX (UBUNTU)
  * Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., ``libiodbc.so`` to ``libiodbc.so.2``
  * Locate where iodbc driver manager libraries are located. Use ``sudo find / -name "*iodbc*`` to search
  * Go to ``nano ~/.bashrc`` and enter the following environmental variables below
- * Use iodbctest ``dsn=Tableau Impala Connection`` to test connection to Impala
+ * Use ``iodbctest`` > ``dsn=Tableau Impala Connection`` to test connection to Impala
  * Enter some SQL commands to test
 
 

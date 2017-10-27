@@ -6,7 +6,7 @@
 Tableau Hacks
 ========================================
 
-Tableau is those type of Business Intelligence software that is easy to start with, 
+Tableau is a type of Business Intelligence software that is easy to start with, 
 but get increasingly complex the deeper you dive into it.
 This site gathers some of the default functions as well as hacks that can make your life easier, 
 or even become a Tableau Pro!
