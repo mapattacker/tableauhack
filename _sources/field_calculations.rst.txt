@@ -5,7 +5,7 @@ Level of Detail (LOD)
 ---------------------
 
 LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions. 
-There are 3 types of LODs: Fixed, Include, & Exclude. More in this link_.
+There are 3 types of LODs: ``Fixed``, ``Include`` & ``Exclude``. More in this link_.
 
 .. _link: https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html
 
@@ -17,7 +17,7 @@ Cat, when just one or more contains a Disease marked by "0". Original question f
 
 
 .. figure:: images/lod1.png
-    :width: 450px
+    :width: 300px
     :align: center
     :alt: alternate text
     :figclass: align-center
