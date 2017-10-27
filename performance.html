@@ -85,7 +85,10 @@
 <li class="toctree-l1"><a class="reference internal" href="layout.html">Dashboard Layout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Performance Tuning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Performance Tuning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#performance-recording">Performance Recording</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
 </ul>
 
@@ -122,6 +125,21 @@
             
   <div class="section" id="performance-tuning">
 <h1>Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="performance-recording">
+<h2>Performance Recording<a class="headerlink" href="#performance-recording" title="Permalink to this headline">¶</a></h2>
+<p>Tableau provide a performance review by producing a detail breakdown of the timing by the use of a dashboard.</p>
+<ol class="arabic simple">
+<li>Go to Help &gt; Settings Performance &gt; Start Performance Recording</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/perf1.png"><img alt="alternate text" src="_images/perf1.png" style="width: 450px;" /></a>
+</div>
+<ol class="arabic simple" start="2">
+<li>Do something, change a parameter, do a quick filter, etc.</li>
+<li>Go to the same place and Stop Performance Recording</li>
+<li>A new Tableau worksheet will pop-up with the timing of each execution internal function.</li>
+</ol>
+</div>
 </div>
 
 

@@ -1,3 +1,18 @@
 Performance Tuning
 ===================
 
+Performance Recording
+----------------------
+Tableau provide a performance review by producing a detail breakdown of the timing by the use of a dashboard.
+
+1. Go to Help > Settings Performance > Start Performance Recording
+
+.. figure:: images/perf1.png
+    :width: 450px
+    :align: center
+    :alt: alternate text
+    :figclass: align-center
+  
+2. Do something, change a parameter, do a quick filter, etc.
+3. Go to the same place and Stop Performance Recording
+4. A new Tableau worksheet will pop-up with the timing of each execution internal function.
