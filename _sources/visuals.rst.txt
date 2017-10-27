@@ -15,3 +15,6 @@ but it is still possible. Read this link_ for more detals.
     :alt: alternate text
     :figclass: align-center
     
+
+Donut Chart
+------------

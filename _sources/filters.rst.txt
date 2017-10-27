@@ -22,7 +22,7 @@ The discussion is in this link_.
 First create these two parameters.
 
 .. figure:: images/filter2.png
-    :width: 250px
+    :width: 200px
     :align: center
     :alt: alternate text
     :figclass: align-center
