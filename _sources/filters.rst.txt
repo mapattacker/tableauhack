@@ -2,7 +2,7 @@ Filters
 =========
 
 Filter Last Date
-------------------------------
+-----------------
 This trick is sourced from http://kb.tableau.com/articles/howto/filter-on-last-date-in-the-data-source.
 It is achieved from the filter pop-up, top tab.
 
@@ -12,3 +12,39 @@ It is achieved from the filter pop-up, top tab.
     :alt: alternate text
     :figclass: align-center
     
+Top Bottom N
+-------------
+This trick is to have two parameters, one having an option of filtering ``Top N`` & ``Bottom N``, or show ``(All)``.
+The discussion is in this link_.
+
+.. _link: https://community.tableau.com/thread/213753
+
+First create these two parameters.
+
+.. figure:: images/filter2.png
+    :width: 300px
+    :align: center
+    :alt: alternate text
+    :figclass: align-center
+    
+Second, create a new field that aligns the field of interest in ascending order.
+
+.. code::
+  
+  rank([Speed],'asc')
+
+Second, create a logic for linking to the two parameters
+
+.. code::
+  
+  IF [Filter] = '(All)'
+  THEN TRUE
+  ELSEIF [Filter] = 'Top N' AND [rank] <= [N]
+  THEN TRUE
+  ELSEIF [Filter] = 'Bottom N' 
+      # reverses the values of your rank field so that you can select bottom N 
+      # using the same calculation that works for top N
+      AND ((([rank] - WINDOW_MAX([rank])) *-1) +1) <= [N]
+  THEN TRUE
+  ELSE FALSE END
+

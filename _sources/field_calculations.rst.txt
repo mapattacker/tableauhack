@@ -11,7 +11,7 @@ There are 3 types of LODs: ``Fixed``, ``Include`` & ``Exclude``. More in this li
 
 
 Below is an example. Red is the desired output. It should give a "Y" for types of Species, e.g., 
-Cat, when just one or more contains a Disease marked by "0". Original question from here_.
+Cat, when just one or more contains a Disease marked by "1". Original question from here_.
 
 .. _here: https://community.tableau.com/thread/212939
 
