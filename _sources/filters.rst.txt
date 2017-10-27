@@ -33,7 +33,7 @@ Second, create a new field that aligns the field of interest in ascending order.
   
   rank([Speed],'asc')
 
-Second, create a logic for linking to the two parameters
+Last, create a logic for linking to the two parameters
 
 .. code::
   

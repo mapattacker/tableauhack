@@ -146,7 +146,7 @@ The discussion is in this <a class="reference external" href="https://community.
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">rank</span><span class="p">([</span><span class="n">Speed</span><span class="p">],</span><span class="s1">&#39;asc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Second, create a logic for linking to the two parameters</p>
+<p>Last, create a logic for linking to the two parameters</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="p">[</span><span class="n">Filter</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;(All)&#39;</span>
 <span class="n">THEN</span> <span class="n">TRUE</span>
 <span class="n">ELSEIF</span> <span class="p">[</span><span class="n">Filter</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Top N&#39;</span> <span class="n">AND</span> <span class="p">[</span><span class="n">rank</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="p">[</span><span class="n">N</span><span class="p">]</span>
