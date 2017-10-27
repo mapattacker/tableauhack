@@ -132,7 +132,7 @@ There are 3 types of LODs: Fixed, Include, &amp; Exclude. More in this <a class=
 <p>Below is an example. Red is the desired output. It should give a &#8220;Y&#8221; for types of Species, e.g.,
 Cat, when just one or more contains a Disease marked by &#8220;0&#8221;. Original question from <a class="reference external" href="https://community.tableau.com/thread/212939">here</a>.</p>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="_images/arrowhead.jpg"><img alt="alternate text" src="_images/arrowhead.jpg" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="_images/lod1.png"><img alt="alternate text" src="_images/lod1.png" style="width: 450px;" /></a>
 </div>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-- This will give 1 if any species have at least a disease</span>
 <span class="p">{</span><span class="n">FIXED</span> <span class="p">[</span><span class="n">Species</span><span class="p">]:</span><span class="n">MAX</span><span class="p">([</span><span class="n">Disease</span><span class="p">])}</span>

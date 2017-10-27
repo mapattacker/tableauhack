@@ -16,7 +16,7 @@ Cat, when just one or more contains a Disease marked by "0". Original question f
 .. _here: https://community.tableau.com/thread/212939
 
 
-.. figure:: images/arrowhead.jpg
+.. figure:: images/lod1.png
     :width: 450px
     :align: center
     :alt: alternate text
