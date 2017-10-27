@@ -3,3 +3,30 @@ Field Calculations
 
 Level of Detail (LOD)
 ---------------------
+
+LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions. 
+There are 3 types of LODs: Fixed, Include, & Exclude. More in this link_.
+
+.. _link: https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html
+
+
+Below is an example. Red is the desired output. It should give a "Y" for types of Species, e.g., 
+Cat, when just one or more contains a Disease marked by "0". Original question from here_.
+
+.. _here: https://community.tableau.com/thread/212939
+
+
+.. figure:: images/arrowhead.jpg
+    :width: 450px
+    :align: center
+    :alt: alternate text
+    :figclass: align-center
+
+.. code:: 
+  
+  #-- This will give 1 if any species have at least a disease
+  {FIXED [Species]:MAX([Disease])}
+
+  #-- Change the 1 to 'Y' and 'N' for otherwise
+  IF {FIXED [Species]:MAX([Disease])} = 1 THEN 'Y' ELSE 'N' END
+

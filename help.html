@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Field Calculations &#8212; Tableau 1 documentation</title>
+    <title>Help &#8212; Tableau 1 documentation</title>
     
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,8 +35,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SQL" href="sql.html" />
-    <link rel="prev" title="Filters" href="filters.html" />
+    <link rel="prev" title="Performance Tuning" href="performance.html" />
   
    
 
@@ -49,10 +48,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="sql.html" title="SQL"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="filters.html" title="Filters"
+          <a href="performance.html" title="Performance Tuning"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>
@@ -80,16 +76,17 @@
 <li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="labels.html">Labels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Field Calculations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#level-of-detail-lod">Level of Detail (LOD)</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="field_calculations.html">Field Calculations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql.html">SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layout.html">Dashboard Layout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performance.html">Performance Tuning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tableau-forum">Tableau Forum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tableau-support">Tableau Support</a></li>
+</ul>
+</li>
 </ul>
 
     
@@ -117,30 +114,22 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Field Calculations</li>
+              <li>Help</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="field-calculations">
-<h1>Field Calculations<a class="headerlink" href="#field-calculations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="level-of-detail-lod">
-<h2>Level of Detail (LOD)<a class="headerlink" href="#level-of-detail-lod" title="Permalink to this headline">¶</a></h2>
-<p>LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions.
-There are 3 types of LODs: Fixed, Include, &amp; Exclude. More in this <a class="reference external" href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html">link</a>.</p>
-<p>Below is an example. Red is the desired output. It should give a &#8220;Y&#8221; for types of Species, e.g.,
-Cat, when just one or more contains a Disease marked by &#8220;0&#8221;. Original question from <a class="reference external" href="https://community.tableau.com/thread/212939">here</a>.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="_images/arrowhead.jpg"><img alt="alternate text" src="_images/arrowhead.jpg" style="width: 450px;" /></a>
+  <div class="section" id="help">
+<h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tableau-forum">
+<h2>Tableau Forum<a class="headerlink" href="#tableau-forum" title="Permalink to this headline">¶</a></h2>
+<p>Tableau Forum (<a class="reference external" href="https://community.tableau.com/community/forums">https://community.tableau.com/community/forums</a>) is the number 1 help for Tableau issues.
+Many Zen Masters and Tableau professionals spend them time helping other users to resolve technical stuff
+at a very efficient time.</p>
 </div>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-- This will give 1 if any species have at least a disease</span>
-<span class="p">{</span><span class="n">FIXED</span> <span class="p">[</span><span class="n">Species</span><span class="p">]:</span><span class="n">MAX</span><span class="p">([</span><span class="n">Disease</span><span class="p">])}</span>
-
-<span class="c1">#-- Change the 1 to &#39;Y&#39; and &#39;N&#39; for otherwise</span>
-<span class="n">IF</span> <span class="p">{</span><span class="n">FIXED</span> <span class="p">[</span><span class="n">Species</span><span class="p">]:</span><span class="n">MAX</span><span class="p">([</span><span class="n">Disease</span><span class="p">])}</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">THEN</span> <span class="s1">&#39;Y&#39;</span> <span class="n">ELSE</span> <span class="s1">&#39;N&#39;</span> <span class="n">END</span>
-</pre></div>
-</div>
+<div class="section" id="tableau-support">
+<h2>Tableau Support<a class="headerlink" href="#tableau-support" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -150,12 +139,9 @@ Cat, when just one or more contains a Disease marked by &#8220;0&#8221;. Origina
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="filters.html" title="previous chapter (use the left arrow)">Filters</a>
+        <a class="btn btn-default" href="performance.html" title="previous chapter (use the left arrow)">Performance Tuning</a>
       </div>
     
-      <div class="pull-right">
-        <a class="btn btn-default" href="sql.html" title="next chapter (use the right arrow)">SQL</a>
-      </div>
     </div>
     <div class="clearer"></div>
   
@@ -169,10 +155,7 @@ Cat, when just one or more contains a Disease marked by &#8220;0&#8221;. Origina
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="sql.html" title="SQL"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="filters.html" title="Filters"
+          <a href="performance.html" title="Performance Tuning"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>

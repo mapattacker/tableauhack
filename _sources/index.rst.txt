@@ -21,15 +21,17 @@ or even become a Tableau Pro!
    :maxdepth: 2
    :hidden:
    
-   organisation.rst
-   visuals.rst
-   axis.rst
-   labels.rst
-   filters.rst
-   field_calculations.rst
-   sql.rst
-   layout.rst
-   custom.rst
-   driver.rst
+   organisation
+   visuals
+   axis
+   labels
+   filters
+   field_calculations
+   sql
+   layout
+   custom
+   driver
+   performance
+   help
 
 
