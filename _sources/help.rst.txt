@@ -7,7 +7,7 @@ Tableau Forum (https://community.tableau.com/community/forums) is the number 1 h
 Many Zen Masters and Tableau professionals spend them time helping other users to resolve technical stuff
 at a very efficient time.
 
-.. figure:: images/help1.jpg
+.. figure:: images/help1.png
     :width: 550px
     :align: center
     :alt: alternate text
