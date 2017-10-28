@@ -4,8 +4,9 @@ Help
 Tableau Forum
 --------------
 Tableau Forum (https://community.tableau.com/community/forums) is the number 1 help for Tableau issues.
-Many Zen Masters and Tableau professionals spend them time helping other users to resolve technical stuff
-at a very efficient time.
+Many Zen Masters and Tableau professionals spend their time helping other users to resolve technical stuff
+at a very efficient time. Because of their expertise, sometimes I find their solutions can be better than
+the official Tableau Support.
 
 .. figure:: images/help1.png
     :width: 550px
@@ -17,4 +18,4 @@ at a very efficient time.
 Tableau Support
 ---------------
 Tableau Support (https://www.tableau.com/case-search-test) allows you to submit a case to Tableau directly.
-Their support staff will assist you in a very timely manner too.
+Their support staff will *always* assist you in a very timely manner.
