@@ -3,8 +3,9 @@ Filters
 
 Filter Last Date
 -----------------
+How do you only show data from the most recent date?
 This trick is sourced from http://kb.tableau.com/articles/howto/filter-on-last-date-in-the-data-source.
-It is achieved from the filter pop-up, top tab.
+It is achieved from the filter pop-up > Top tab.
 
 .. figure:: images/orderbydate.PNG
     :width: 450px
