@@ -17,8 +17,8 @@ TSM Commands
 
 Resources
 -----------
-  * Tableau Server Installation Guide for Linux. pdf1_
+  * Tableau Server Installation Guide for Linux. link_
   * Tableau Server Platform Monitoring (whitepaper). pdf2_
   
-.. _pdf1: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_tsm.htm
+.. _link: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_tsm.htm
 .. _pdf2: https://www.tableau.com/sites/default/files/whitepapers/tableau_server_platform_monitoring.pdf
