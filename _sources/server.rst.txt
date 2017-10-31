@@ -1,0 +1,24 @@
+Tableau Server
+================
+
+Installation
+--------------
+
+
+
+TSM Commands
+-------------
+
+.. figure:: images/tableauserver1.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+
+
+Resources
+-----------
+  * Tableau Server Installation Guide for Linux. pdf1_
+  * Tableau Server Platform Monitoring (whitepaper). pdf2_
+  
+.. _pdf1: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_tsm.htm
+.. _pdf2: https://www.tableau.com/sites/default/files/whitepapers/tableau_server_platform_monitoring.pdf

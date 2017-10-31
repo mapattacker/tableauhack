@@ -16,3 +16,10 @@ Tableau provide a performance review by producing a detail breakdown of the timi
 2. Do something, change a parameter, do a quick filter, etc.
 3. Go to the same place and ``Stop Performance Recording``
 4. A new Tableau worksheet will pop-up with the timing of each execution internal function.
+
+
+Resources
+----------
+  * Designing Efficient Workbooks (Tableau Whitepaper) pdf1_
+
+.. _pdf1: https://www.tableau.com/learn/whitepapers/designing-efficient-workbooks
