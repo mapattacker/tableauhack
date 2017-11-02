@@ -9,7 +9,7 @@ This can be done by two ways.
 First we can do it at the worksheet view, right click a datasource and extract. 
 
 .. figure:: images/publish2.png
-    :width: 550px
+    :width: 350px
     :align: center
     :figclass: align-center
 
