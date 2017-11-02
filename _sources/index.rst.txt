@@ -30,8 +30,9 @@ or even become a Tableau Pro!
    sql
    layout
    custom
-   driver
+   publish
    performance
+   driver
    server
    help
 

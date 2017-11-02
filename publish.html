@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Performance Tuning &#8212; Tableau 1 documentation</title>
+    <title>Publish &#8212; Tableau 1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Drivers" href="driver.html" />
-    <link rel="prev" title="Publish" href="publish.html" />
+    <link rel="next" title="Performance Tuning" href="performance.html" />
+    <link rel="prev" title="Custom Stuff" href="custom.html" />
   
    
 
@@ -46,10 +46,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="driver.html" title="Drivers"
+          <a href="performance.html" title="Performance Tuning"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="publish.html" title="Publish"
+          <a href="custom.html" title="Custom Stuff"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>
@@ -81,13 +81,11 @@
 <li class="toctree-l1"><a class="reference internal" href="sql.html">SQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layout.html">Dashboard Layout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publish.html">Publish</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Performance Tuning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#performance-recording">Performance Recording</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Performance Tuning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Publish</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#publish-an-extract">Publish an Extract</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">Performance Tuning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="server.html">Tableau Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
@@ -118,48 +116,19 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Performance Tuning</li>
+              <li>Publish</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="performance-tuning">
-<h1>Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="performance-recording">
-<h2>Performance Recording<a class="headerlink" href="#performance-recording" title="Permalink to this headline">¶</a></h2>
-<p>Tableau provide a performance review by producing a detail breakdown of the timing by the use of a dashboard.</p>
-<ol class="arabic simple">
-<li>Go to <code class="docutils literal"><span class="pre">Help</span></code> &gt; <code class="docutils literal"><span class="pre">Settings</span> <span class="pre">Performance</span></code> &gt; <code class="docutils literal"><span class="pre">Start</span> <span class="pre">Performance</span> <span class="pre">Recording</span></code></li>
-</ol>
+  <div class="section" id="publish">
+<h1>Publish<a class="headerlink" href="#publish" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="publish-an-extract">
+<h2>Publish an Extract<a class="headerlink" href="#publish-an-extract" title="Permalink to this headline">¶</a></h2>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="_images/perf1.png"><img alt="alternate text" src="_images/perf1.png" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="_images/publish1.png"><img alt="_images/publish1.png" src="_images/publish1.png" style="width: 550px;" /></a>
 </div>
-<ol class="arabic simple" start="2">
-<li>Do something, change a parameter, do a quick filter, etc.</li>
-<li>Go to the same place and <code class="docutils literal"><span class="pre">Stop</span> <span class="pre">Performance</span> <span class="pre">Recording</span></code></li>
-<li>A new Tableau worksheet will pop-up with the timing of each execution internal function.</li>
-</ol>
-</div>
-<div class="section" id="id1">
-<h2>Performance Tuning<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="extract">
-<h3>Extract<a class="headerlink" href="#extract" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="custom-sql-vs-field-calculation">
-<h3>Custom SQL vs Field Calculation<a class="headerlink" href="#custom-sql-vs-field-calculation" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="quick-filter-parameter">
-<h3>Quick Filter &amp; Parameter<a class="headerlink" href="#quick-filter-parameter" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li>Designing Efficient Workbooks (Tableau Whitepaper) <a class="reference external" href="https://www.tableau.com/learn/whitepapers/designing-efficient-workbooks">pdf1</a></li>
-</ul>
-</div></blockquote>
 </div>
 </div>
 
@@ -169,11 +138,11 @@
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="publish.html" title="previous chapter (use the left arrow)">Publish</a>
+        <a class="btn btn-default" href="custom.html" title="previous chapter (use the left arrow)">Custom Stuff</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="driver.html" title="next chapter (use the right arrow)">Drivers</a>
+        <a class="btn btn-default" href="performance.html" title="next chapter (use the right arrow)">Performance Tuning</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -188,10 +157,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="driver.html" title="Drivers"
+          <a href="performance.html" title="Performance Tuning"
              >next</a> |</li>
         <li class="right" >
-          <a href="publish.html" title="Publish"
+          <a href="custom.html" title="Custom Stuff"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>

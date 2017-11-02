@@ -1,0 +1,12 @@
+Publish
+========
+
+Publish an Extract
+---------------------
+
+.. figure:: images/publish1.png
+    :width: 550px
+    :align: center
+    :figclass: align-center
+
+

@@ -18,6 +18,21 @@ Tableau provide a performance review by producing a detail breakdown of the timi
 4. A new Tableau worksheet will pop-up with the timing of each execution internal function.
 
 
+Performance Tuning
+-------------------
+
+Extract
+********
+
+Custom SQL vs Field Calculation
+*********************************
+
+Quick Filter & Parameter
+***************************
+
+
+
+
 Resources
 ----------
   * Designing Efficient Workbooks (Tableau Whitepaper) pdf1_
