@@ -3,6 +3,23 @@ Publish
 
 Publish an Extract
 ---------------------
+To publish an extract to Tableau Server or Tableau Public (by default an extract is needed), we need to create an extract of the dataset first.
+This can be done by two ways.
+
+First we can do it at the worksheet view, right click a datasource and extract. 
+
+.. figure:: images/publish2.png
+    :width: 550px
+    :align: center
+    :figclass: align-center
+
+Or we can go to the datasource view and choose Extract. To define the resolution of extract, click edit and choose the options accordingly.
+
+.. figure:: images/publish3.png
+    :width: 550px
+    :align: center
+    :figclass: align-center
+
 
 .. figure:: images/publish1.png
     :width: 550px
