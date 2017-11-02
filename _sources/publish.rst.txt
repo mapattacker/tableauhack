@@ -13,16 +13,26 @@ First we can do it at the worksheet view, right click a datasource and extract.
     :align: center
     :figclass: align-center
 
+|
+
 Or we can go to the datasource view and choose Extract. To define the resolution of extract, click edit and choose the options accordingly.
 
+|
+
 .. figure:: images/publish3.png
-    :width: 550px
+    :width: 450px
     :align: center
     :figclass: align-center
 
+|
+
+Then, we can go to publish > publish workbook > for publish type, click embed in workbook. This ensures that the extract is published from 
+your local machine to the server directly.
+
+|
 
 .. figure:: images/publish1.png
-    :width: 550px
+    :width: 450px
     :align: center
     :figclass: align-center
 
