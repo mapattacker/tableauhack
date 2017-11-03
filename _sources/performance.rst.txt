@@ -1,4 +1,4 @@
-Performance Tuning
+Performance
 ===================
 
 Performance Recording
@@ -38,3 +38,7 @@ Resources
   * Designing Efficient Workbooks (Tableau Whitepaper) pdf1_
 
 .. _pdf1: https://www.tableau.com/learn/whitepapers/designing-efficient-workbooks
+
+  * Optimize Workbook Performance. link1_
+  
+.. _link: http://onlinehelp.tableau.com/current/pro/desktop/en-us/performance_tips.html
