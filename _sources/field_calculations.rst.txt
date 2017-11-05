@@ -1,4 +1,4 @@
-Field Calculations
+Calculations
 ====================
 
 Edit
@@ -9,6 +9,27 @@ In case you have too calculated fields swimming in a sea of fields, this is a wa
     :width: 400px
     :align: center
     :figclass: align-center
+
+
+Adhoc Calculations
+-------------------
+Ad-hoc_ calculations are calculations that you can create and update as you work with a field on a shelf in the view.
+It differs from field calculations as they do not require a name.
+
+Ad-hoc calculations are supported on the **Rows, Columns, Marks, and Measure Values shelves**; they are not supported on the **Filters or Pages** shelves.
+They can be created by double clicking an existing field or empty space at the shelf.
+
+.. figure:: images/calculate2.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+    
+.. figure:: images/calculate3.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+.. _Ad-hoc: https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_adhoc.html
 
 
 Level of Detail (LOD)
