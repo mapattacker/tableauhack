@@ -35,5 +35,6 @@ or even become a Tableau Pro!
    driver
    server
    help
+   cert
 
 

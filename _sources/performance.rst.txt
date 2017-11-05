@@ -27,7 +27,10 @@ Extract
 Custom SQL vs Field Calculation
 *********************************
 
-Quick Filter & Parameter
+Parameters
+***********
+
+Quick Filters
 ***************************
 
 
