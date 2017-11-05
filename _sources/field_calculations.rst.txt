@@ -20,10 +20,12 @@ Ad-hoc calculations are supported on the **Rows, Columns, Marks, and Measure Val
 They can be created by double clicking an existing field or empty space at the shelf.
 
 .. figure:: images/calculate2.png
-    :width: 300px
+    :width: 400px
     :align: center
     :figclass: align-center
-    
+
+|
+
 .. figure:: images/calculate3.png
     :width: 300px
     :align: center
