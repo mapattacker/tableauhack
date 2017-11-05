@@ -13,8 +13,7 @@ In case you have too calculated fields swimming in a sea of fields, this is a wa
 
 Adhoc Calculations
 -------------------
-Ad-hoc_ calculations are calculations that you can create and update as you work with a field on a shelf in the view.
-It differs from field calculations as they do not require a name.
+Ad-hoc_ calculations are calculations that you create on the fly, avoiding the need to create a field calculation.
 
 Ad-hoc calculations are supported on the **Rows, Columns, Marks, and Measure Values shelves**; they are not supported on the **Filters or Pages** shelves.
 They can be created by double clicking an existing field or empty space at the shelf.
@@ -32,6 +31,12 @@ They can be created by double clicking an existing field or empty space at the s
     :figclass: align-center
 
 .. _Ad-hoc: https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_adhoc.html
+
+Note that ad-hoc calculations are not available when you create groups, sets, hierarchies, or parameters.
+
+
+Logical Functions
+------------------
 
 
 Level of Detail (LOD)
