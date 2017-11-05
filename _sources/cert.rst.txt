@@ -4,7 +4,7 @@ Certification
 Tableau has two types of certification, Desktop & Server. Each certification has two levels, differentiated 
 by difficulty, Qualified Associate & then Certified Professional.
 
-The exam prep guides listed in their website is the best way to understand what you should be studying for.
+The exam prep guides listed in their website_ is the best way to understand what you should be studying for.
 The certificates do not last forever. Associates are only valid for 2 years, while Professionals are 3 years.
 
 Resources
