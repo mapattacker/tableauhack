@@ -6,7 +6,7 @@ Edit
 In case you have too calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.
 
 .. figure:: images/calculate1.png
-    :width: 500px
+    :width: 400px
     :align: center
     :figclass: align-center
 
