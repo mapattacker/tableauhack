@@ -1,6 +1,16 @@
 Field Calculations
 ====================
 
+Edit
+----
+In case you have too calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.
+
+.. figure:: images/calculate1.png
+    :width: 500px
+    :align: center
+    :figclass: align-center
+
+
 Level of Detail (LOD)
 ---------------------
 
@@ -29,4 +39,5 @@ Cat, when just one or more contains a Disease marked by "1". Original question f
 
   #-- Change the 1 to 'Y' and 'N' for otherwise
   IF {FIXED [Species]:MAX([Disease])} = 1 THEN 'Y' ELSE 'N' END
+
 
