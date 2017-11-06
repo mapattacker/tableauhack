@@ -30,6 +30,7 @@ or even become a Tableau Pro!
    sql
    layout
    custom
+   dashboard
    publish
    performance
    driver

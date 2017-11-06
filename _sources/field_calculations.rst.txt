@@ -3,7 +3,7 @@ Calculations
 
 Edit
 ----
-In case you have too calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.
+In case you have too many calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.
 
 .. figure:: images/calculate1.png
     :width: 400px
@@ -39,7 +39,7 @@ Logical Functions
 ------------------
 
 
-Level of Detail (LOD)
+LOD
 ---------------------
 
 LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions. 

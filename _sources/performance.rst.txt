@@ -44,4 +44,4 @@ Resources
 
   * Optimize Workbook Performance. link1_
   
-.. _link: http://onlinehelp.tableau.com/current/pro/desktop/en-us/performance_tips.html
+.. _link1: http://onlinehelp.tableau.com/current/pro/desktop/en-us/performance_tips.html

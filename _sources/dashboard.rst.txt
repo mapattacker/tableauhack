@@ -1,0 +1,27 @@
+Dashboard
+============
+
+Action
+-------
+To have interactivity between charts within a dashboard, you will need to add an *Action*. Go to Dashboard > Action.
+There are 3 types of actions **Filter**, **Url**, and **Highlight**.
+
+.. figure:: images/dashboard1.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+
+Action Filter
+**************
+
+.. figure:: images/dashboard2.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+
+
+Device Preview
+----------------
+Note that you can only change the layout dimensions and sizing in preview modes.
+You are not allowed to edit the content, action filters, or other things.

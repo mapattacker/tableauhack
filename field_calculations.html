@@ -1,11 +1,10 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
@@ -16,10 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Calculations &#8212; Tableau 1 documentation</title>
-    
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -41,7 +38,7 @@
    
 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -84,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#edit">Edit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#adhoc-calculations">Adhoc Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#logical-functions">Logical Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#level-of-detail-lod">Level of Detail (LOD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lod">LOD</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sql.html">SQL</a></li>
@@ -133,7 +130,7 @@
 <h1>Calculations<a class="headerlink" href="#calculations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="edit">
 <h2>Edit<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h2>
-<p>In case you have too calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.</p>
+<p>In case you have too many calculated fields swimming in a sea of fields, this is a way to quickly find and edit them.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/calculate1.png"><img alt="_images/calculate1.png" src="_images/calculate1.png" style="width: 400px;" /></a>
 </div>
@@ -157,12 +154,12 @@ They can be created by double clicking an existing field or empty space at the s
 <div class="section" id="logical-functions">
 <h2>Logical Functions<a class="headerlink" href="#logical-functions" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="level-of-detail-lod">
-<h2>Level of Detail (LOD)<a class="headerlink" href="#level-of-detail-lod" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lod">
+<h2>LOD<a class="headerlink" href="#lod" title="Permalink to this headline">¶</a></h2>
 <p>LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions.
 There are 3 types of LODs: <code class="docutils literal"><span class="pre">Fixed</span></code>, <code class="docutils literal"><span class="pre">Include</span></code> &amp; <code class="docutils literal"><span class="pre">Exclude</span></code>. More in this <a class="reference external" href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html">link</a>.</p>
-<p>Below is an example. Red is the desired output. It should give a &#8220;Y&#8221; for types of Species, e.g.,
-Cat, when just one or more contains a Disease marked by &#8220;1&#8221;. Original question from <a class="reference external" href="https://community.tableau.com/thread/212939">here</a>.</p>
+<p>Below is an example. Red is the desired output. It should give a “Y” for types of Species, e.g.,
+Cat, when just one or more contains a Disease marked by “1”. Original question from <a class="reference external" href="https://community.tableau.com/thread/212939">here</a>.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/lod1.png"><img alt="alternate text" src="_images/lod1.png" style="width: 300px;" /></a>
 </div>
