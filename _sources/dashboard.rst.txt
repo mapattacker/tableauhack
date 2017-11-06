@@ -20,6 +20,8 @@ Action Filter
     :align: center
     :figclass: align-center
 
+Layout
+-------
 
 Device Preview
 ----------------

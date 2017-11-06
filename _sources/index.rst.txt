@@ -28,9 +28,8 @@ or even become a Tableau Pro!
    filters
    field_calculations
    sql
-   layout
-   custom
    dashboard
+   custom
    publish
    performance
    driver
