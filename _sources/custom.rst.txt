@@ -17,3 +17,13 @@ Shapes
 New shapes/symbols can be added to Tableau by creating a new folder or adding into existing folders within
 ``Documents\My Tableau Repository\Shapes``.
 
+
+Map Services
+--------------
+Onemap is the best free basemap for Singapore. You can use the altered version_ that a forum user contributed.
+
+.. _version: https://community.tableau.com/thread/230094
+
+GeoServer is a good open-source map-server. See more here too._.
+
+.. _too: https://mapattacker.github.io/geoserver/

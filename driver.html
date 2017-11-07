@@ -151,14 +151,19 @@ In short, it is very very fast when running queries, with significant performanc
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/impala1.PNG"><img alt="alternate text" src="_images/impala1.PNG" style="width: 450px;" /></a>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Go to Impala IDE, HUE and check the database name to connect.</p>
-<div class="align-center figure" id="id1">
+<div class="align-center figure">
 <a class="reference internal image-reference" href="_images/impala2.PNG"><img alt="alternate text" src="_images/impala2.PNG" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">HUE IDE</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 <p>Note that Tableau&#8217;s Cloudera Hadoop ODBC driver does not work, god knows why.
 Click on <code class="docutils literal"><span class="pre">Other</span> <span class="pre">Databases</span> <span class="pre">(ODBC)</span></code> and enter the details for DSN name, Server IP, &amp; Port (51052)</p>
-<div class="align-center figure" id="id2">
+<div class="align-center figure" id="id1">
 <a class="reference internal image-reference" href="_images/impala3.PNG"><img alt="alternate text" src="_images/impala3.PNG" style="width: 450px;" /></a>
 <p class="caption"><span class="caption-text">Add the host, port &amp; database</span></p>
 </div>
@@ -210,7 +215,8 @@ export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 <li>Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., <code class="docutils literal"><span class="pre">libiodbc.so</span></code> to <code class="docutils literal"><span class="pre">libiodbc.so.2</span></code></li>
 <li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
 <li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables below</li>
-<li>Use <code class="docutils literal"><span class="pre">iodbctest</span></code> &gt; <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
+<li>For iODBC, use <code class="docutils literal"><span class="pre">iodbctest</span></code> &gt; <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
+<li>For unixODBC, use <code class="docutils literal"><span class="pre">isql</span> <span class="pre">&quot;Data</span> <span class="pre">Source</span> <span class="pre">Name&quot;</span></code> to test connection to Impala</li>
 <li>Enter some SQL commands to test</li>
 </ul>
 </div></blockquote>

@@ -28,7 +28,9 @@ First, go to Windows ODBC manager. Go to Windows > Search > 64-bit ODBC Manager.
     :align: center
     :alt: alternate text
     :figclass: align-center
-    
+
+|
+
 Go to Impala IDE, HUE and check the database name to connect.
 
 .. figure:: images/impala2.PNG
@@ -36,9 +38,8 @@ Go to Impala IDE, HUE and check the database name to connect.
     :align: center
     :alt: alternate text
     :figclass: align-center
-    
-    HUE IDE
-    
+
+|    
 
 Note that Tableau's Cloudera Hadoop ODBC driver does not work, god knows why. 
 Click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server IP, & Port (51052)
@@ -83,7 +84,8 @@ LINUX (UBUNTU)
  * Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., ``libiodbc.so`` to ``libiodbc.so.2``
  * Locate where iodbc driver manager libraries are located. Use ``sudo find / -name "*iodbc*`` to search
  * Go to ``nano ~/.bashrc`` and enter the following environmental variables below
- * Use ``iodbctest`` > ``dsn=Tableau Impala Connection`` to test connection to Impala
+ * For iODBC, use ``iodbctest`` > ``dsn=Tableau Impala Connection`` to test connection to Impala
+ * For unixODBC, use ``isql "Data Source Name"`` to test connection to Impala 
  * Enter some SQL commands to test
 
 
