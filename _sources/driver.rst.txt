@@ -14,7 +14,7 @@ However, connection to Tableau Desktop or Tableau Server might not be as straigh
  * Go to https://www.cloudera.com/documentation/other/connectors.html
  * Select OS & driver connection type & version
  * Driver will be downloaded
- * Also download documentation at same page or use the link below
+ * Also download documentation at same page or use the link below (note that you can skip this for Linux)
  * http://www.cloudera.com/documentation/other/connectors/impala-odbc/latest/Cloudera-ODBC-Driver-for-Impala-Install-Guide.pdf
  * Follow the documentation for driver setup, main thing is to configure the DSN (Data Source Name)
 
@@ -41,16 +41,7 @@ Go to Impala IDE, HUE and check the database name to connect.
 
 |    
 
-Note that Tableau's Cloudera Hadoop ODBC driver does not work, god knows why. 
-Click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server IP, & Port (51052)
 
-.. figure:: images/impala3.PNG
-    :width: 450px
-    :align: center
-    :alt: alternate text
-    :figclass: align-center
-    
-    Add the host, port & database 
 
 
 MacOS
@@ -80,30 +71,39 @@ MacOS
 
 LINUX (UBUNTU)
 ***************
+Linux configuration is very straight forward. After installation of the driver, change the 
+``/etc/odbcinst.ini`` & ``/opt/cloudera/impalaodbc/lib/64/cloudera.impalaodbc.ini`` files as stated in this link_.
 
- * Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., ``libiodbc.so`` to ``libiodbc.so.2``
- * Locate where iodbc driver manager libraries are located. Use ``sudo find / -name "*iodbc*`` to search
- * Go to ``nano ~/.bashrc`` and enter the following environmental variables below
- * For iODBC, use ``iodbctest`` > ``dsn=Tableau Impala Connection`` to test connection to Impala
- * For unixODBC, use ``isql "Data Source Name"`` to test connection to Impala 
- * Enter some SQL commands to test
-
-
-.. code::
-
-  export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
-  export ODBCINI=~/.odbc.ini 
-  export ODBCINSTINI=~/.odbcinst.ini 
-  export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
+.. _link: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_drivers_linux.htm#cloudera-impala
 
 
 
 Tableau Desktop
 ****************
- * In Tableau Desktop, go to Other Databases (ODBC)
- * At DSN > select the DSN name you created
- * Click Connect
- * Enter Server, Port (21050) & database (default)
- * Click Sign In
+
+  * In Tableau Desktop, go to ``Cloudera Hadoop ODBC driver``
+  * Enter Server, Port (21050), Type (Impala)
+
+.. figure:: images/impala4.PNG
+   :width: 450px
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+
  
+If the previous ODBC connection does not work, 
+click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server IP, & Port (21050)
+
+  * Other Databases (ODBC)
+  * At DSN > select the DSN name you created
+  * Click Connect
+  * Enter Server, Port (21050) & database (default)
+  * Click Sign In
+ 
+.. figure:: images/impala3.PNG
+   :width: 450px
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+     
  

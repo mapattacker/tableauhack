@@ -1,11 +1,10 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
@@ -16,10 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Drivers &#8212; Tableau 1 documentation</title>
-    
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -41,7 +38,7 @@
    
 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -140,7 +137,7 @@ In short, it is very very fast when running queries, with significant performanc
 <li>Go to <a class="reference external" href="https://www.cloudera.com/documentation/other/connectors.html">https://www.cloudera.com/documentation/other/connectors.html</a></li>
 <li>Select OS &amp; driver connection type &amp; version</li>
 <li>Driver will be downloaded</li>
-<li>Also download documentation at same page or use the link below</li>
+<li>Also download documentation at same page or use the link below (note that you can skip this for Linux)</li>
 <li><a class="reference external" href="http://www.cloudera.com/documentation/other/connectors/impala-odbc/latest/Cloudera-ODBC-Driver-for-Impala-Install-Guide.pdf">http://www.cloudera.com/documentation/other/connectors/impala-odbc/latest/Cloudera-ODBC-Driver-for-Impala-Install-Guide.pdf</a></li>
 <li>Follow the documentation for driver setup, main thing is to configure the DSN (Data Source Name)</li>
 </ul>
@@ -160,12 +157,6 @@ In short, it is very very fast when running queries, with significant performanc
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
-</div>
-<p>Note that Tableau&#8217;s Cloudera Hadoop ODBC driver does not work, god knows why.
-Click on <code class="docutils literal"><span class="pre">Other</span> <span class="pre">Databases</span> <span class="pre">(ODBC)</span></code> and enter the details for DSN name, Server IP, &amp; Port (51052)</p>
-<div class="align-center figure" id="id1">
-<a class="reference internal image-reference" href="_images/impala3.PNG"><img alt="alternate text" src="_images/impala3.PNG" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">Add the host, port &amp; database</span></p>
 </div>
 </div>
 <div class="section" id="macos">
@@ -210,36 +201,34 @@ export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
 </div>
 <div class="section" id="linux-ubuntu">
 <h3>LINUX (UBUNTU)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><ul class="simple">
-<li>Same as Mac but for .cloudera.impalaodbc.ini, change the default iodbc manager name to what is indicated in system, i.e., <code class="docutils literal"><span class="pre">libiodbc.so</span></code> to <code class="docutils literal"><span class="pre">libiodbc.so.2</span></code></li>
-<li>Locate where iodbc driver manager libraries are located. Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">find</span> <span class="pre">/</span> <span class="pre">-name</span> <span class="pre">&quot;*iodbc*</span></code> to search</li>
-<li>Go to <code class="docutils literal"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> and enter the following environmental variables below</li>
-<li>For iODBC, use <code class="docutils literal"><span class="pre">iodbctest</span></code> &gt; <code class="docutils literal"><span class="pre">dsn=Tableau</span> <span class="pre">Impala</span> <span class="pre">Connection</span></code> to test connection to Impala</li>
-<li>For unixODBC, use <code class="docutils literal"><span class="pre">isql</span> <span class="pre">&quot;Data</span> <span class="pre">Source</span> <span class="pre">Name&quot;</span></code> to test connection to Impala</li>
-<li>Enter some SQL commands to test</li>
-</ul>
-</div></blockquote>
-<div class="code highlight-default"><div class="highlight"><pre><span></span>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/lib/x84_64-linux-gnu/
-export ODBCINI=~/.odbc.ini
-
-export ODBCINSTINI=~/.odbcinst.ini
-
-export CLOUDERAIMPALAODBCINI=~/.cloudera.impalaodbc.ini
-</pre></div>
-</div>
+<p>Linux configuration is very straight forward. After installation of the driver, change the
+<code class="docutils literal"><span class="pre">/etc/odbcinst.ini</span></code> &amp; <code class="docutils literal"><span class="pre">/opt/cloudera/impalaodbc/lib/64/cloudera.impalaodbc.ini</span></code> files as stated in this <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_drivers_linux.htm#cloudera-impala">link</a>.</p>
 </div>
 <div class="section" id="tableau-desktop">
 <h3>Tableau Desktop<a class="headerlink" href="#tableau-desktop" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li>In Tableau Desktop, go to Other Databases (ODBC)</li>
+<li>In Tableau Desktop, go to <code class="docutils literal"><span class="pre">Cloudera</span> <span class="pre">Hadoop</span> <span class="pre">ODBC</span> <span class="pre">driver</span></code></li>
+<li>Enter Server, Port (21050), Type (Impala)</li>
+</ul>
+</div></blockquote>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="images/impala4.PNG"><img alt="alternate text" src="images/impala4.PNG" style="width: 450px;" /></a>
+</div>
+<p>If the previous ODBC connection does not work,
+click on <code class="docutils literal"><span class="pre">Other</span> <span class="pre">Databases</span> <span class="pre">(ODBC)</span></code> and enter the details for DSN name, Server IP, &amp; Port (21050)</p>
+<blockquote>
+<div><ul class="simple">
+<li>Other Databases (ODBC)</li>
 <li>At DSN &gt; select the DSN name you created</li>
 <li>Click Connect</li>
 <li>Enter Server, Port (21050) &amp; database (default)</li>
 <li>Click Sign In</li>
 </ul>
 </div></blockquote>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/impala3.PNG"><img alt="alternate text" src="_images/impala3.PNG" style="width: 450px;" /></a>
+</div>
 </div>
 </div>
 </div>
