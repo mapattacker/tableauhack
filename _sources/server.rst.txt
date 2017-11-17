@@ -47,7 +47,7 @@ Server Status
 
 In Tableau Server administration GUI, under status, you can see the real-time statuses of the processes run by the server.
 
-.. figure:: images/tableauserver1.png
+.. figure:: images/server.PNG
     :width: 650px
     :align: center
     :figclass: align-center
@@ -64,3 +64,4 @@ Resources
   
 .. _link: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_tsm.htm
 .. _pdf2: https://www.tableau.com/sites/default/files/whitepapers/tableau_server_platform_monitoring.pdf
+
