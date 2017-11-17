@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Search &#8212; Tableau 1 documentation</title>
+    <title>Permissions &#8212; Tableau 1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -30,18 +30,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Help" href="help.html" />
+    <link rel="prev" title="Tableau Server" href="server.html" />
   
    
-
 
   </head>
   <body>
@@ -51,6 +45,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="help.html" title="Help"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="server.html" title="Tableau Server"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>
     </div>
@@ -71,7 +71,7 @@
   <div class="sidebar-toc">
     
     
-      <ul>
+      <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="organisation.html">Organise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visuals.html">Visuals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="axis.html">Axis</a></li>
@@ -85,7 +85,12 @@
 <li class="toctree-l1"><a class="reference internal" href="performance.html">Performance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="server.html">Tableau Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="permission.html">Permissions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Permissions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#user-roles">User Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#row-specific-filters">Row Specific Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#column-specific-filters">Column Specific Filters</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cert.html">Certification</a></li>
 </ul>
@@ -94,6 +99,19 @@
   </div>
 </div>
         
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
     </div>
   </div>
         <div id="right-column">
@@ -102,46 +120,46 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Search</li>
+              <li>Permissions</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
+  <div class="section" id="permissions">
+<h1>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-roles">
+<h2>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline">¶</a></h2>
+<p>In Tableau Server, user roles can be defined at several levels, with viewer being the lowest.
+However, viewer does not have access to any form of interaction, including quick filters, parameters, and action filters.
+Only the interactor role and above have access to them.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/permission.png"><img alt="_images/permission.png" src="_images/permission.png" style="width: 450px;" /></a>
+</div>
+</div>
+<div class="section" id="row-specific-filters">
+<h2>Row Specific Filters<a class="headerlink" href="#row-specific-filters" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="column-specific-filters">
+<h2>Column Specific Filters<a class="headerlink" href="#column-specific-filters" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
 
-  <div class="search-page-form">
-    <form class="form-inline" action="#" method="GET" role="form">
-      <div class="input-group">
-        <input name="q" type="text" class="form-control" />
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">search</button>
-        </span>
-      </div>
-      <span id="search-progress" style="padding-left: 10px"></span>
-    </form>
-  </div>
-
-  
-  <div id="search-results">
-  
-  </div>
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="server.html" title="previous chapter (use the left arrow)">Tableau Server</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="help.html" title="next chapter (use the right arrow)">Help</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -151,6 +169,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="help.html" title="Help"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="server.html" title="Tableau Server"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Tableau 1 documentation</a> &#187;</li> 
       </ul>
     </div>

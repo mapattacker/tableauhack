@@ -27,3 +27,7 @@ Onemap is the best free basemap for Singapore. You can use the altered version_ 
 GeoServer is a good open-source map-server. See more here too._.
 
 .. _too: https://mapattacker.github.io/geoserver/
+
+Some notes on custom map services_.
+
+.. _services: http://onlinehelp.tableau.com/current/pro/desktop/en-us/maps_mapsources_wms.html

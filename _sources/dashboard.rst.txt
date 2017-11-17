@@ -23,7 +23,31 @@ Action Filter
 Layout
 -------
 
-Device Preview
+Default
+********
+
+.. figure:: images/dashboard3.png
+    :width: 250px
+    :align: center
+    :figclass: align-center
+
+You can select a fixed, custom, or range of sizes for default.
+
+Note that the Default dashboard is the parent while the device dashboards are children.
+
+Therefore, any view, filter, action, legend or parameter that you want to add to a device 
+layout must first exist in the Default dashboard. 
+However, each device layout can contain independent web, image, text, and layout objects.
+
+Device
 ----------------
-Note that you can only change the layout dimensions and sizing in preview modes.
+
+If you remove an item from the device layout, it's only removed from that layout. 
+It still exists on the default dashboard and can be added back to the layout again, or to other device layouts.
+
+You can only change the layout dimensions and sizing in preview modes.
 You are not allowed to edit the content, action filters, or other things.
+
+More here_.
+
+.. _here: https://onlinehelp.tableau.com/current/pro/desktop/en-us/dashboards_dsd_create.html

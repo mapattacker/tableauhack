@@ -101,7 +101,7 @@ click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server I
   * Click Sign In
  
 .. figure:: images/impala3.PNG
-   :width: 450px
+   :width: 550px
    :align: center
    :alt: alternate text
    :figclass: align-center

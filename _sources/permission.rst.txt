@@ -1,0 +1,22 @@
+Permissions
+============
+
+User Roles
+-----------
+In Tableau Server, user roles can be defined at several levels, with viewer being the lowest.
+However, viewer does not have access to any form of interaction, including quick filters, parameters, and action filters.
+Only the interactor role and above have access to them.
+
+.. figure:: images/permission.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+
+
+Row Specific Filters
+--------------------
+
+
+Column Specific Filters
+------------------------
+

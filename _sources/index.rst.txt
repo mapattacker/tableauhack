@@ -34,6 +34,7 @@ or even become a Tableau Pro!
    performance
    driver
    server
+   permission
    help
    cert
 

@@ -39,6 +39,25 @@ Logical Functions
 ------------------
 
 
+.. code:: 
+  
+  CASE right(left([Startdate], 7), 2) 
+    WHEN '01' THEN 'Jan'
+    WHEN '02' THEN 'Feb'
+    WHEN '03' THEN 'Mar'
+    WHEN '04' THEN 'Apr'
+    WHEN '05' THEN 'May'
+    WHEN '06' THEN 'Jun'
+    WHEN '07' THEN 'Jul'
+    WHEN '08' THEN 'Aug'
+    WHEN '09' THEN 'Sep'
+    WHEN '10' THEN 'Oct'
+    WHEN '11' THEN 'Nov'
+    WHEN '12' THEN 'Dec'
+  END
+
+
+
 LOD
 ---------------------
 
@@ -68,4 +87,12 @@ Cat, when just one or more contains a Disease marked by "1". Original question f
   #-- Change the 1 to 'Y' and 'N' for otherwise
   IF {FIXED [Species]:MAX([Disease])} = 1 THEN 'Y' ELSE 'N' END
 
+Others
+--------
 
+Concat Strings
+**************
+
+.. code::
+  
+  [StartDay] + '-' + [StartMonth]

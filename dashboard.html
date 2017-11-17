@@ -82,7 +82,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Dashboard</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#action">Action</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#layout">Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#device-preview">Device Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device">Device</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Stuff</a></li>
@@ -90,6 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="performance.html">Performance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="server.html">Tableau Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permission.html">Permissions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cert.html">Certification</a></li>
 </ul>
@@ -143,11 +144,25 @@ There are 3 types of actions <strong>Filter</strong>, <strong>Url</strong>, and 
 </div>
 <div class="section" id="layout">
 <h2>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="default">
+<h3>Default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="_images/dashboard3.png"><img alt="_images/dashboard3.png" src="_images/dashboard3.png" style="width: 250px;" /></a>
 </div>
-<div class="section" id="device-preview">
-<h2>Device Preview<a class="headerlink" href="#device-preview" title="Permalink to this headline">¶</a></h2>
-<p>Note that you can only change the layout dimensions and sizing in preview modes.
+<p>You can select a fixed, custom, or range of sizes for default.</p>
+<p>Note that the Default dashboard is the parent while the device dashboards are children.</p>
+<p>Therefore, any view, filter, action, legend or parameter that you want to add to a device
+layout must first exist in the Default dashboard.
+However, each device layout can contain independent web, image, text, and layout objects.</p>
+</div>
+</div>
+<div class="section" id="device">
+<h2>Device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h2>
+<p>If you remove an item from the device layout, it’s only removed from that layout.
+It still exists on the default dashboard and can be added back to the layout again, or to other device layouts.</p>
+<p>You can only change the layout dimensions and sizing in preview modes.
 You are not allowed to edit the content, action filters, or other things.</p>
+<p>More <a class="reference external" href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/dashboards_dsd_create.html">here</a>.</p>
 </div>
 </div>
 
