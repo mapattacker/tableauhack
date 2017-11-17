@@ -9,11 +9,53 @@ Installation
 TSM Commands
 -------------
 
+To enable tableau services manager (TSM) after installation, use this ``source /etc/profile.d/tableau_server.sh``
+
 .. figure:: images/tableauserver1.png
     :width: 650px
     :align: center
     :figclass: align-center
 
+After any configurations, you have to first apply the changes via ``tsm pending-changes apply``, 
+then start TSM again for Tableau Server to become active. Use ``tsm start``.
+
+
+Distributed Cluster
+--------------------
+
+Tableau has a recommended list_ of distributed configurations for single, two-node and 
+high availability cluster. This is to configure for high extraction, high user usage, and redundancy prevention.
+
+Here is an example_ to configure a 3-node HA cluster, more specific to linux.
+
+.. _list: https://onlinehelp.tableau.com/current/server/en-us/distributed_install_recommendations.htm
+
+.. _example: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/distrib_ha_install_3node_linux.htm
+
+
+Below is an example of how to set the processes.
+
+.. code:: bash
+  
+  # example
+  tsm topology set-process -n node3 -pr clustercontroller -c 1
+  tsm topology set-process -n node2 -pr backgrounder -c 2
+
+
+Server Status
+----------------
+
+In Tableau Server administration GUI, under status, you can see the real-time statuses of the processes run by the server.
+
+.. figure:: images/tableauserver1.png
+    :width: 650px
+    :align: center
+    :figclass: align-center
+
+If it is functioning properly, processes will show as Active, Busy or Passive (Repository). 
+Otherwise, you can troubleshoot from this page_.
+
+.. _page:  http://onlinehelp.tableau.com/current/server/en_us/service_status_troubleshoot.htm
 
 Resources
 -----------
