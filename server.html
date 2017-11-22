@@ -1,11 +1,10 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
@@ -16,10 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Tableau Server &#8212; Tableau 1 documentation</title>
-    
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -41,7 +38,7 @@
    
 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -135,6 +132,8 @@
 <h1>Tableau Server<a class="headerlink" href="#tableau-server" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Take a look at the official Tableau Server Linux guide, link provided at resources (bottom).</p>
+<p>Note that if your server is off the internet, you will need to make an offline license <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/activate_off_linux.htm">activation</a>.</p>
 </div>
 <div class="section" id="tsm-commands">
 <h2>TSM Commands<a class="headerlink" href="#tsm-commands" title="Permalink to this headline">¶</a></h2>
@@ -142,11 +141,8 @@
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/tableauserver1.png"><img alt="_images/tableauserver1.png" src="_images/tableauserver1.png" style="width: 650px;" /></a>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>After any configurations, you have to first apply the changes via <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">pending-changes</span> <span class="pre">apply</span></code>,
-then start TSM again for Tableau Server to become active. Use <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">start</span></code>.</p>
+<p>Logs of tsm is kept in <code class="docutils literal"><span class="pre">/home/xxx/.tableau/tsm/tsm.log</span></code>.
+However, you can use <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">maintenance</span> <span class="pre">-l</span> <span class="pre">-f</span> <span class="pre">&lt;filename.txt&gt;</span></code> to create a log file.</p>
 </div>
 <div class="section" id="distributed-cluster">
 <h2>Distributed Cluster<a class="headerlink" href="#distributed-cluster" title="Permalink to this headline">¶</a></h2>
@@ -159,10 +155,14 @@ high availability cluster. This is to configure for high extraction, high user u
 <span class="n">tsm</span> <span class="n">topology</span> <span class="nb">set</span><span class="o">-</span><span class="n">process</span> <span class="o">-</span><span class="n">n</span> <span class="n">node2</span> <span class="o">-</span><span class="n">pr</span> <span class="n">backgrounder</span> <span class="o">-</span><span class="n">c</span> <span class="mi">2</span>
 </pre></div>
 </div>
+<p>After any configurations, you have to first apply the changes via <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">pending-changes</span> <span class="pre">apply</span></code>,
+and Tableau Server will be automatically restarted if the application is successful.
+If not, you will need to start up the Server manually using <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">start</span></code>.</p>
 </div>
 <div class="section" id="server-status">
 <h2>Server Status<a class="headerlink" href="#server-status" title="Permalink to this headline">¶</a></h2>
-<p>In Tableau Server administration GUI, under status, you can see the real-time statuses of the processes run by the server.</p>
+<p>In Tableau Server administration GUI, under status, you can see the real-time statuses of the processes run by the server.
+This can only be seen by the Server Administrator.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/server.PNG"><img alt="_images/server.PNG" src="_images/server.PNG" style="width: 650px;" /></a>
 </div>

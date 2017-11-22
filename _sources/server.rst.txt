@@ -4,6 +4,11 @@ Tableau Server
 Installation
 --------------
 
+Take a look at the official Tableau Server Linux guide, link provided at resources (bottom).
+
+Note that if your server is off the internet, you will need to make an offline license activation_.
+
+.. _activation: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/activate_off_linux.htm
 
 
 TSM Commands
@@ -15,11 +20,9 @@ To enable tableau services manager (TSM) after installation, use this ``source /
     :width: 650px
     :align: center
     :figclass: align-center
-
-|
-
-After any configurations, you have to first apply the changes via ``tsm pending-changes apply``, 
-then start TSM again for Tableau Server to become active. Use ``tsm start``.
+  
+Logs of tsm is kept in ``/home/xxx/.tableau/tsm/tsm.log``. 
+However, you can use ``tsm maintenance -l -f <filename.txt>`` to create a log file.
 
 
 Distributed Cluster
@@ -43,11 +46,17 @@ Below is an example of how to set the processes.
   tsm topology set-process -n node3 -pr clustercontroller -c 1
   tsm topology set-process -n node2 -pr backgrounder -c 2
 
+After any configurations, you have to first apply the changes via ``tsm pending-changes apply``, 
+and Tableau Server will be automatically restarted if the application is successful.
+If not, you will need to start up the Server manually using ``tsm start``.
+
+
 
 Server Status
 ----------------
 
 In Tableau Server administration GUI, under status, you can see the real-time statuses of the processes run by the server.
+This can only be seen by the Server Administrator.
 
 .. figure:: images/server.PNG
     :width: 650px

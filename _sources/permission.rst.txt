@@ -16,7 +16,21 @@ Only the interactor role and above have access to them.
 Row Specific Filters
 --------------------
 
+http://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_userfilters.html
+
+.. figure:: images/permission1.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+|
+
+There will be an additional option during publishing to add a thumbnail to user/groups. Select accordingly.
+
 
 Column Specific Filters
 ------------------------
+
+There are currently no column specific filters, but it can be done from row specific filters by not selecting any of the categories 
+for that column.
 

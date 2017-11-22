@@ -6,7 +6,6 @@ Impala
 Impala is a massively parallel processing SQL query engine for Hadoop. 
 In short, it is very very fast when running queries, with significant performances even over Hive.
 
-However, connection to Tableau Desktop or Tableau Server might not be as straightforward, especially in Mac or Linux.
 
 **For a start:**
 
