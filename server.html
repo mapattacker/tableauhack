@@ -180,11 +180,16 @@ Otherwise, you can troubleshoot from this <a class="reference external" href="ht
 <div class="section" id="uninstallation">
 <h2>Uninstallation<a class="headerlink" href="#uninstallation" title="Permalink to this headline">¶</a></h2>
 <p>You may either <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm">uninstall</a> Tableau Server or use the <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm">obliterate</a> script to remove all instances &amp; files of Tableau Server from the computer.
-For the latter, it can be run after uninstallation too to remove traces of the Server. For that, the script can be found in
-the <code class="docutils literal"><span class="pre">/var/tmp</span></code> directory. Otherwise, the script can be run using the commend</p>
+Uninstallation is done by the following in Ubuntu:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">tableau</span><span class="o">-</span><span class="n">server</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>The obliterate script can be found and run as follows:</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">tableau</span><span class="o">/</span><span class="n">tableau_server</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">scripts</span><span class="o">.&lt;</span><span class="n">version</span><span class="o">&gt;/</span><span class="n">tableau</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">obliterate</span> <span class="o">-</span><span class="n">y</span> <span class="o">-</span><span class="n">y</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
+<p>The obliterate script is removed from the default directory after uninstallation.
+However, a copy is kept at the <code class="docutils literal"><span class="pre">/var/tmp</span></code> directory, so you can use that to remove all traces after installation.</p>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>

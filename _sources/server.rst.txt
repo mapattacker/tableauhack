@@ -79,17 +79,25 @@ Otherwise, you can troubleshoot from this page_.
 Uninstallation
 ---------------
 You may either uninstall_ Tableau Server or use the obliterate_ script to remove all instances & files of Tableau Server from the computer.
-For the latter, it can be run after uninstallation too to remove traces of the Server. For that, the script can be found in
-the ``/var/tmp`` directory. Otherwise, the script can be run using the commend 
+Uninstallation is done by the following in Ubuntu:
+
+.. code::
+  
+  sudo apt-get purge tableau-server* 
+
+The obliterate script can be found and run as follows:
 
 .. code::
   
   sudo /opt/tableau/tableau_server/packages/scripts.<version>/tableau-server-obliterate -y -y -y
-  
+
+The obliterate script is removed from the default directory after uninstallation.
+However, a copy is kept at the ``/var/tmp`` directory, so you can use that to remove all traces after installation.
 
 .. _uninstall: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm
 
 .. _obliterate: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm
+
 
 Resources
 -----------
