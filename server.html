@@ -89,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#tsm-commands">TSM Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-cluster">Distributed Cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-status">Server Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uninstallation">Uninstallation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
@@ -141,11 +142,15 @@
 <div class="align-center figure">
 <a class="reference internal image-reference" href="_images/tableauserver1.png"><img alt="_images/tableauserver1.png" src="_images/tableauserver1.png" style="width: 650px;" /></a>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Logs of tsm is kept in <code class="docutils literal"><span class="pre">/home/xxx/.tableau/tsm/tsm.log</span></code>.
-However, you can use <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">maintenance</span> <span class="pre">-l</span> <span class="pre">-f</span> <span class="pre">&lt;filename.txt&gt;</span></code> to create a log file.</p>
+However, you can use <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">maintenance</span> <span class="pre">ziplogs</span></code> to zip up the log file.</p>
 </div>
 <div class="section" id="distributed-cluster">
 <h2>Distributed Cluster<a class="headerlink" href="#distributed-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Each node will have to be installed with Tableau Server to distribute the processes from the master node, but note the <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/distrib_requ_linux.htm">requirements</a>.</p>
 <p>Tableau has a recommended <a class="reference external" href="https://onlinehelp.tableau.com/current/server/en-us/distributed_install_recommendations.htm">list</a> of distributed configurations for single, two-node and
 high availability cluster. This is to configure for high extraction, high user usage, and redundancy prevention.</p>
 <p>Here is an <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/distrib_ha_install_3node_linux.htm">example</a> to configure a 3-node HA cluster, more specific to linux.</p>
@@ -157,7 +162,7 @@ high availability cluster. This is to configure for high extraction, high user u
 </div>
 <p>After any configurations, you have to first apply the changes via <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">pending-changes</span> <span class="pre">apply</span></code>,
 and Tableau Server will be automatically restarted if the application is successful.
-If not, you will need to start up the Server manually using <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">start</span></code>.</p>
+If not (sometimes errors occur), you will need to start up the Server manually using <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">start</span></code>.</p>
 </div>
 <div class="section" id="server-status">
 <h2>Server Status<a class="headerlink" href="#server-status" title="Permalink to this headline">¶</a></h2>
@@ -171,6 +176,15 @@ This can only be seen by the Server Administrator.</p>
 </div>
 <p>If it is functioning properly, processes will show as Active, Busy or Passive (Repository).
 Otherwise, you can troubleshoot from this <a class="reference external" href="http://onlinehelp.tableau.com/current/server/en_us/service_status_troubleshoot.htm">page</a>.</p>
+</div>
+<div class="section" id="uninstallation">
+<h2>Uninstallation<a class="headerlink" href="#uninstallation" title="Permalink to this headline">¶</a></h2>
+<p>You may either <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm">uninstall</a> Tableau Server or use the <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm">obliterate</a> script to remove all instances &amp; files of Tableau Server from the computer.
+For the latter, it can be run after uninstallation too to remove traces of the Server. For that, the script can be found in
+the <code class="docutils literal"><span class="pre">/var/tmp</span></code> directory. Otherwise, the script can be run using the commend</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">tableau</span><span class="o">/</span><span class="n">tableau_server</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">scripts</span><span class="o">.&lt;</span><span class="n">version</span><span class="o">&gt;/</span><span class="n">tableau</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">obliterate</span> <span class="o">-</span><span class="n">y</span> <span class="o">-</span><span class="n">y</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>

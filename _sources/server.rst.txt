@@ -20,18 +20,23 @@ To enable tableau services manager (TSM) after installation, use this ``source /
     :width: 650px
     :align: center
     :figclass: align-center
-  
+
+|
+
 Logs of tsm is kept in ``/home/xxx/.tableau/tsm/tsm.log``. 
-However, you can use ``tsm maintenance -l -f <filename.txt>`` to create a log file.
+However, you can use ``tsm maintenance ziplogs`` to zip up the log file.
 
 
 Distributed Cluster
 --------------------
+Each node will have to be installed with Tableau Server to distribute the processes from the master node, but note the requirements_.
 
 Tableau has a recommended list_ of distributed configurations for single, two-node and 
 high availability cluster. This is to configure for high extraction, high user usage, and redundancy prevention.
 
 Here is an example_ to configure a 3-node HA cluster, more specific to linux.
+
+.. _requirements: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/distrib_requ_linux.htm
 
 .. _list: https://onlinehelp.tableau.com/current/server/en-us/distributed_install_recommendations.htm
 
@@ -48,7 +53,7 @@ Below is an example of how to set the processes.
 
 After any configurations, you have to first apply the changes via ``tsm pending-changes apply``, 
 and Tableau Server will be automatically restarted if the application is successful.
-If not, you will need to start up the Server manually using ``tsm start``.
+If not (sometimes errors occur), you will need to start up the Server manually using ``tsm start``.
 
 
 
@@ -69,6 +74,22 @@ If it is functioning properly, processes will show as Active, Busy or Passive (R
 Otherwise, you can troubleshoot from this page_.
 
 .. _page:  http://onlinehelp.tableau.com/current/server/en_us/service_status_troubleshoot.htm
+
+
+Uninstallation
+---------------
+You may either uninstall_ Tableau Server or use the obliterate_ script to remove all instances & files of Tableau Server from the computer.
+For the latter, it can be run after uninstallation too to remove traces of the Server. For that, the script can be found in
+the ``/var/tmp`` directory. Otherwise, the script can be run using the commend 
+
+.. code::
+  
+  sudo /opt/tableau/tableau_server/packages/scripts.<version>/tableau-server-obliterate -y -y -y
+  
+
+.. _uninstall: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm
+
+.. _obliterate: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm
 
 Resources
 -----------
