@@ -6,10 +6,24 @@ Installation
 
 Take a look at the official Tableau Server Linux guide, link provided at resources (bottom).
 
+
+Offline License Activation
+----------------------------
+
 Note that if your server is off the internet, you will need to make an offline license activation_.
+This involved a command to generate an offline license file called ``offline.tlq``.
+Then, transfer that file to an online computer, and upload the file to Tableau activation site_.
+The site might said the license is outdated, and give you an new key. With that, regenerate the offline file again.
+
+Once successful, another file called ``activation.tlf`` will be given you to you. 
+Use that file to activate Tableau Server ``tsm licenses activate -f <path-and-activation-file>``.
+
+To check the licenses, go to ``tsm licenses list``.  
+  
 
 .. _activation: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/activate_off_linux.htm
 
+.. _site: https://www.tableau.com/support/activation
 
 TSM Commands
 -------------

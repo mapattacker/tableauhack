@@ -86,6 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="driver.html">Drivers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tableau Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offline-license-activation">Offline License Activation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tsm-commands">TSM Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-cluster">Distributed Cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-status">Server Status</a></li>
@@ -134,7 +135,16 @@
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Take a look at the official Tableau Server Linux guide, link provided at resources (bottom).</p>
-<p>Note that if your server is off the internet, you will need to make an offline license <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/activate_off_linux.htm">activation</a>.</p>
+</div>
+<div class="section" id="offline-license-activation">
+<h2>Offline License Activation<a class="headerlink" href="#offline-license-activation" title="Permalink to this headline">¶</a></h2>
+<p>Note that if your server is off the internet, you will need to make an offline license <a class="reference external" href="http://onlinehelp.tableau.com/v10.5/server-linux/en-us/activate_off_linux.htm">activation</a>.
+This involved a command to generate an offline license file called <code class="docutils literal"><span class="pre">offline.tlq</span></code>.
+Then, transfer that file to an online computer, and upload the file to Tableau activation <a class="reference external" href="https://www.tableau.com/support/activation">site</a>.
+The site might said the license is outdated, and give you an new key. With that, regenerate the offline file again.</p>
+<p>Once successful, another file called <code class="docutils literal"><span class="pre">activation.tlf</span></code> will be given you to you.
+Use that file to activate Tableau Server <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">licenses</span> <span class="pre">activate</span> <span class="pre">-f</span> <span class="pre">&lt;path-and-activation-file&gt;</span></code>.</p>
+<p>To check the licenses, go to <code class="docutils literal"><span class="pre">tsm</span> <span class="pre">licenses</span> <span class="pre">list</span></code>.</p>
 </div>
 <div class="section" id="tsm-commands">
 <h2>TSM Commands<a class="headerlink" href="#tsm-commands" title="Permalink to this headline">¶</a></h2>
