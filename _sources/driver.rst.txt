@@ -106,3 +106,17 @@ click on ``Other Databases (ODBC)`` and enter the details for DSN name, Server I
    :figclass: align-center
      
  
+Azure Cosmos DB
+----------------
+Cosmos DB is a kind of schemaless database which can link to MongoDB etc. To connect to Tableau, an ODBC driver have to be installed (for Windows).
+More here_. Then, define the settings. After which, in Tableau Desktop, click on ``Other Databases (ODBC)`` and enter the parameters.
+
+.. figure:: images/driver1.PNG
+   :width: 550px
+   :align: center
+   :alt: alternate text
+   :figclass: align-center
+
+.. _here: https://docs.microsoft.com/en-us/azure/cosmos-db/odbc-driver
+
+   
