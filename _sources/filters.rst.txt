@@ -1,6 +1,44 @@
 Filters
 =========
 
+Parameter to Change Views
+--------------------------
+To swap two or more charts based on a filter, a parameter needs to be created with the possible selectors.
+Here is an example of two views using daily and weekly bar chart.
+
+.. figure:: images/changeview1.png
+    :width: 450px
+    :align: center
+
+Then, we create one calculated field and dump the parameter field in.
+
+.. figure:: images/changeview2.png
+    :width: 450px
+    :align: center
+
+Add the daily chart in a dashboard and also the parameter called interval. 
+Make sure it is selected as daily.
+
+.. figure:: images/changeview3.png
+    :width: 450px
+    :align: center
+
+Pass the calculated field into filters and select 'Daily' at the Daily Barchart worksheet.
+
+.. figure:: images/changeview4.png
+    :width: 450px
+    :align: center
+
+Now select 'Weekly' in the parameter, and at the Weekly Barchart worksheet, pass the calculated field into filters,
+and select 'Weekly'.
+
+.. figure:: images/changeview5.png
+    :width: 450px
+    :align: center
+
+Lastly, add a vertical object into the Dashboard, and add both views into the object.
+
+
 Filter Last Date
 -----------------
 How do you only show data from the most recent date?
