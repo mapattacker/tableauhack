@@ -10,12 +10,14 @@ Here is an example of two views using daily and weekly bar chart.
     :width: 450px
     :align: center
 
+|
 Then, we create one calculated field and dump the parameter field in.
 
 .. figure:: images/changeview2.png
     :width: 450px
     :align: center
 
+|
 Add the daily chart in a dashboard and also the parameter called interval. 
 Make sure it is selected as daily.
 
@@ -23,12 +25,14 @@ Make sure it is selected as daily.
     :width: 450px
     :align: center
 
+|
 Pass the calculated field into filters and select 'Daily' at the Daily Barchart worksheet.
 
 .. figure:: images/changeview4.png
     :width: 450px
     :align: center
 
+|
 Now select 'Weekly' in the parameter, and at the Weekly Barchart worksheet, pass the calculated field into filters,
 and select 'Weekly'.
 
@@ -36,6 +40,7 @@ and select 'Weekly'.
     :width: 450px
     :align: center
 
+|
 Lastly, add a vertical object into the Dashboard, and add both views into the object.
 
 
