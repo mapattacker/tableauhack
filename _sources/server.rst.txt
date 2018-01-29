@@ -118,6 +118,6 @@ Resources
   * Tableau Server Installation Guide for Linux. link_
   * Tableau Server Platform Monitoring (whitepaper). pdf2_
 
-.. _link: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_tsm.htm
+.. _link: https://onlinehelp.tableau.com/current/server-linux/en-us/config_linux.htm
 .. _pdf2: https://www.tableau.com/sites/default/files/whitepapers/tableau_server_platform_monitoring.pdf
 
