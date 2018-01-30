@@ -17,6 +17,7 @@ The site might said the license is outdated, and give you an new key. With that,
 
 Once successful, another file called ``activation.tlf`` will be given you to you. 
 Use that file to activate Tableau Server ``tsm licenses activate -f <path-and-activation-file>``.
+For first time activation in the server, you will need to activate twice.
 
 To check the licenses, go to ``tsm licenses list``.  
   
@@ -103,10 +104,11 @@ The obliterate script can be found and run as follows:
 
 .. code::
   
-  sudo /opt/tableau/tableau_server/packages/scripts.<version>/tableau-server-obliterate -y -y -y
+  sudo /opt/tableau/tableau_server/packages/scripts.<version>/tableau-server-obliterate -y -y -y -l
 
 The obliterate script is removed from the default directory after uninstallation.
-However, a copy is kept at the ``/var/tmp`` directory, so you can use that to remove all traces after installation.
+However, a copy is kept at the ``/var/tmp`` directory, so you can use that to remove all traces after installation. 
+`sudo /var/tmp/tableau-server-obliterate -y -y -y -l`
 
 .. _uninstall: http://onlinehelp.tableau.com/v10.5/server-linux/en-us/uninstall_linux.htm
 
