@@ -20,6 +20,21 @@ Action Filter
     :align: center
     :figclass: align-center
 
+Create a Tooltip link to Change to Another Dashboard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This can be done using an action filter. Just select the "Target Sheet" as another dashboard,
+and change "Run Action On" to Menu. Label the action filter name properly since this name 
+will be the one that appear in the tooltip.
+
+Create a Back Button to Go to Previous Dashboard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The concept is the same as the previous. But this time:
+  1. Search for a custom shape that have a back button icon (.png). 
+  2. Add a field that will always be present in the data source (e.g., Number of Records) and add to rows/columns shelf. 
+  3. Remove the label and change the mark to shape.
+  4. Use an Action Filter and select "Target Sheet" to the dashboard you want it to go back to.
+
+
 Layout
 -------
 

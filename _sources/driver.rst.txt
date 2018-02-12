@@ -72,8 +72,9 @@ LINUX (UBUNTU)
 ***************
 Linux configuration is very straight forward. After installation of the driver, change the 
 ``/etc/odbcinst.ini`` & ``/opt/cloudera/impalaodbc/lib/64/cloudera.impalaodbc.ini`` files as stated in this link_.
+From the link, choose the driver and OS (Linux).
 
-.. _link: http://onlinehelp.tableau.com/v10.5/serverlinux/en-us/install_drivers_linux.htm#cloudera-impala
+.. _link: https://www.tableau.com/support/drivers
 
 
 

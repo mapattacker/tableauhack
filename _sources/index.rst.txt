@@ -17,6 +17,14 @@ or even become a Tableau Pro!
     :alt: alternate text
     :figclass: align-center
 
+Below are some other nice resources for learning basics of Tableau
+
+  * Tableau Official Help. link_
+  * Tutorial Point. link2_
+
+.. _link1: https://onlinehelp.tableau.com/current/pro/desktop/en-us/default.html
+.. _link2: https://www.tutorialspoint.com/tableau/index.htm
+
 .. toctree::
    :maxdepth: 2
    :hidden:
