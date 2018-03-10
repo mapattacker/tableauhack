@@ -175,6 +175,7 @@ They can be created by double clicking an existing field or empty space at the s
 <div class="section" id="lod">
 <h2>LOD<a class="headerlink" href="#lod" title="Permalink to this headline">¶</a></h2>
 <p>LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions.
+It is similar to SQL’s analytic function, an example being <cite>SELECT SUM(field_name) over() partition by fieldname2 from tablename</cite>.
 There are 3 types of LODs: <code class="docutils literal"><span class="pre">Fixed</span></code>, <code class="docutils literal"><span class="pre">Include</span></code> &amp; <code class="docutils literal"><span class="pre">Exclude</span></code>. More in this <a class="reference external" href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html">link</a>.</p>
 <p>Below is an example. Red is the desired output. It should give a “Y” for types of Species, e.g.,
 Cat, when just one or more contains a Disease marked by “1”. Original question from <a class="reference external" href="https://community.tableau.com/thread/212939">here</a>.</p>
@@ -188,9 +189,28 @@ Cat, when just one or more contains a Disease marked by “1”. Original questi
 <span class="n">IF</span> <span class="p">{</span><span class="n">FIXED</span> <span class="p">[</span><span class="n">Species</span><span class="p">]:</span><span class="n">MAX</span><span class="p">([</span><span class="n">Disease</span><span class="p">])}</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">THEN</span> <span class="s1">&#39;Y&#39;</span> <span class="n">ELSE</span> <span class="s1">&#39;N&#39;</span> <span class="n">END</span>
 </pre></div>
 </div>
+<p>To force calculations over the entire table, you can avoid putting any dimensions in the LOD.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">FIXED</span> <span class="p">:</span> <span class="n">SUM</span><span class="p">([</span><span class="n">Row_Number</span><span class="p">])}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="others">
 <h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="attr">
+<h3>ATTR<a class="headerlink" href="#attr" title="Permalink to this headline">¶</a></h3>
+<p>The attribute function ATTR() is a special function in Tableau.
+It basically returns the result an expression only if there is a single value;
+when there are multiple values, it returns an asterik (*).
+You will notice that the field will change from a dimension to measure upon using ATTR().</p>
+<p>ATTR can be futher used as an IF ELSE to detect the presence of a single value,
+rather than a visual cue of (*):</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">COUNTD</span><span class="p">(</span><span class="n">fieldname</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+  <span class="n">then</span> <span class="s1">&#39;All Towns&#39;</span>
+<span class="n">ELSE</span> <span class="n">ATTR</span><span class="p">([</span><span class="n">TOWNSTATE</span><span class="p">])</span>
+<span class="n">END</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="concat-strings">
 <h3>Concat Strings<a class="headerlink" href="#concat-strings" title="Permalink to this headline">¶</a></h3>
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">StartDay</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="p">[</span><span class="n">StartMonth</span><span class="p">]</span>

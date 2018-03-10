@@ -61,7 +61,8 @@ Logical Functions
 LOD
 ---------------------
 
-LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions. 
+LOD expressions is an important Tableau field calculation that allows calculations to subsets of one or more dimensions.
+It is similar to SQL's analytic function, an example being `SELECT SUM(field_name) over() partition by fieldname2 from tablename`.
 There are 3 types of LODs: ``Fixed``, ``Include`` & ``Exclude``. More in this link_.
 
 .. _link: https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod_overview.html
@@ -87,9 +88,34 @@ Cat, when just one or more contains a Disease marked by "1". Original question f
   #-- Change the 1 to 'Y' and 'N' for otherwise
   IF {FIXED [Species]:MAX([Disease])} = 1 THEN 'Y' ELSE 'N' END
 
+To force calculations over the entire table, you can avoid putting any dimensions in the LOD.
+
+.. code::
+
+  {FIXED : SUM([Row_Number])}
+
+
 Others
 --------
 
+ATTR
+*****
+The attribute function ATTR() is a special function in Tableau.
+It basically returns the result an expression only if there is a single value;
+when there are multiple values, it returns an asterik (*).
+You will notice that the field will change from a dimension to measure upon using ATTR().
+
+ATTR can be futher used as an IF ELSE to detect the presence of a single value,
+rather than a visual cue of (*):
+
+.. code::
+
+  IF COUNTD(fieldname) > 1
+    then 'All Towns'
+  ELSE ATTR([TOWNSTATE])
+  END
+
+  
 Concat Strings
 **************
 
